@@ -17,7 +17,7 @@ public class CameraController : MonoBehaviour
 
   void Start()
   {
-    hand = GameObject.Find("Hand").transform;
+    hand = GameObject.Find("Arm").transform;
     handOrigin = hand.position;
     cameraOrigin = transform.position;
     offset = cameraOrigin - handOrigin;

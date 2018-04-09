@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.Experimental.UIElements;
 using UnityEditor;
 
-public class HandController : MonoBehaviour
+public class ArmController : MonoBehaviour
 {
   Transform transformBound;
   Vector3 moveBound;
