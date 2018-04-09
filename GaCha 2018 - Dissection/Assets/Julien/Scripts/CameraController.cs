@@ -34,6 +34,6 @@ public class CameraController : MonoBehaviour
     float speedY = hand.position.y - transform.position.y + offset.y;
     float speedZ = hand.position.z - transform.position.z + offset.z;
 
-    transform.position += new Vector3(speedX / 5, speedY, speedZ);
+    transform.position += new Vector3(speedX / 5, speedY / 5, speedZ / 5);
   }
 }
