@@ -61,6 +61,10 @@ public class CameraController : MonoBehaviour
 
   void MoveForward()
   {
-    transform.position += new Vector3(0, 0, Input.GetAxis("Vertical"));
+    if (!(transform.position.z > moveBound.z / 2 + transformBound.position.z) && Input.GetAxis("Vertical") > 0)
+      transform.position += new Vector3(0, 0, Input.GetAxis("Vertical"));
+
+    if (!(transform.position.z < moveBound.z / 2 + transformBound.position.z) && Input.GetAxis("Vertical") < 0)
+      transform.position += new Vector3(0, 0, Input.GetAxis("Vertical"));
   }
 }
