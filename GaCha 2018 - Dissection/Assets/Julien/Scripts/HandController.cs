@@ -45,7 +45,7 @@ public class HandController : MonoBehaviour
     if (speedY < -2)
       speedY = -2;
 
-
+    /*
     if (!(transform.position.x < (-moveBound.x / 2) + transformBound.position.x) && Input.GetAxis("Mouse X") < 0)
       transform.position += new Vector3(speedX, 0, 0);
 
@@ -53,10 +53,12 @@ public class HandController : MonoBehaviour
       transform.position += new Vector3(speedX, 0, 0);
 
     if (!(transform.position.y < -moveBound.y / 2 + transformBound.position.y) && Input.GetAxis("Mouse Y") < 0)
-      transform.position += new Vector3(0, speedY, 0);
+      transform.position += new Vector3(0, speedY, 0);*/
 
-    if (!(transform.position.y > moveBound.y / 2 + transformBound.position.y) && Input.GetAxis("Mouse Y") > 0)
-      transform.position += new Vector3(0, speedY, 0);
+    // if (!(transform.position.y > moveBound.y / 2 + transformBound.position.y) && Input.GetAxis("Mouse Y") > 0)
+    // transform.position += new Vector3(0, speedY, 0);
+
+    transform.position += new Vector3(speedX, speedY, 0);
   }
 
   void MoveForward()
