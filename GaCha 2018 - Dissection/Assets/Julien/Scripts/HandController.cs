@@ -14,8 +14,6 @@ public class HandController : MonoBehaviour
   void Start()
   {
     Cursor.lockState = CursorLockMode.Locked;
-    transformBound = GameObject.Find("MoveBound").transform;
-    moveBound = transformBound.GetComponent<BoxCollider>().size;
   }
 
   void Update()
