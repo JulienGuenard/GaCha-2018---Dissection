@@ -7,64 +7,33 @@ using UnityEditor;
 
 public class CameraController : MonoBehaviour
 {
-  Transform transformBound;
+  Transform hand;
   Vector3 moveBound;
   public float cameraSpeed;
+  float speed;
+  Vector3 handOrigin;
+  Vector3 cameraOrigin;
+  Vector3 offset;
 
   void Start()
   {
-    Cursor.lockState = CursorLockMode.Locked;
-    transformBound = GameObject.Find("MoveBound").transform;
-    moveBound = transformBound.GetComponent<BoxCollider>().size;
+    hand = GameObject.Find("Hand").transform;
+    handOrigin = hand.position;
+    cameraOrigin = transform.position;
+    offset = cameraOrigin - handOrigin;
   }
 
   void Update()
   {
     Move();
-    MoveForward();
-
-
   }
 
   void Move()
   {
-    Debug.Log(transform.position + " " + moveBound);
+    float speedX = hand.position.x - transform.position.x + offset.x;
+    float speedY = hand.position.y - transform.position.y + offset.y;
+    float speedZ = hand.position.z - transform.position.z + offset.z;
 
-    float speedX = Input.GetAxis("Mouse X") * cameraSpeed;
-    float speedY = Input.GetAxis("Mouse Y") * cameraSpeed;
-
-    if (speedX > 2)
-      speedX = 2;
-
-    if (speedX < -2)
-      speedX = -2;
-
-    if (speedY > 2)
-      speedY = 2;
-
-    if (speedY < -2)
-      speedY = -2;
-        
-
-    if (!(transform.position.x < (-moveBound.x / 2) + transformBound.position.x) && Input.GetAxis("Mouse X") < 0)
-      transform.position += new Vector3(speedX, 0, 0);
-    
-    if (!(transform.position.x > moveBound.x / 2 + transformBound.position.x) && Input.GetAxis("Mouse X") > 0)
-      transform.position += new Vector3(speedX, 0, 0);
-    
-    if (!(transform.position.y < -moveBound.y / 2 + transformBound.position.y) && Input.GetAxis("Mouse Y") < 0)
-      transform.position += new Vector3(0, speedY, 0);
-
-    if (!(transform.position.y > moveBound.y / 2 + transformBound.position.y) && Input.GetAxis("Mouse Y") > 0)
-      transform.position += new Vector3(0, speedY, 0);
-  }
-
-  void MoveForward()
-  {
-    if (!(transform.position.z > moveBound.z / 2 + transformBound.position.z) && Input.GetAxis("Vertical") > 0)
-      transform.position += new Vector3(0, 0, Input.GetAxis("Vertical"));
-
-    if (!(transform.position.z < moveBound.z / 2 + transformBound.position.z) && Input.GetAxis("Vertical") < 0)
-      transform.position += new Vector3(0, 0, Input.GetAxis("Vertical"));
+    transform.position += new Vector3(speedX / 5, speedY, speedZ);
   }
 }
