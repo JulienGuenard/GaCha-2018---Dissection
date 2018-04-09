@@ -6,6 +6,7 @@ public class HandController : MonoBehaviour
 {
 
   GameObject selectedObj;
+  Color lastColor;
 
   void Update()
   {
@@ -20,7 +21,7 @@ public class HandController : MonoBehaviour
 
   void OnTriggerEnter(Collider col)
   {
-    if (col.tag == "Artere")
+    if (col.tag == "Artere" || col.tag == "Os" || col.tag == "Organe")
       {
         if (selectedObj != null)
           {
@@ -32,7 +33,7 @@ public class HandController : MonoBehaviour
 
   void OnTriggerExit(Collider col)
   {
-    if (col.tag == "Artere")
+    if (col.tag == "Artere" || col.tag == "Os" || col.tag == "Organe")
       {
         if (selectedObj != null && col.gameObject.name == selectedObj.name)
           {
@@ -43,13 +44,14 @@ public class HandController : MonoBehaviour
 
   void SelectArtere(GameObject obj)
   {
+    lastColor = obj.GetComponent<MeshRenderer>().material.color;
     obj.GetComponent<MeshRenderer>().material.color = Color.yellow;
     selectedObj = obj;
   }
 
   void DeselectdArtere(GameObject obj)
   {
-    selectedObj.GetComponent<MeshRenderer>().material.color = Color.white;
+    selectedObj.GetComponent<MeshRenderer>().material.color = lastColor;
     selectedObj = null;
   }
 }
