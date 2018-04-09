@@ -5,7 +5,7 @@ using UnityEngine;
 public class HandController : MonoBehaviour
 {
 
-  public GameObject selectedObj;
+  static public GameObject selectedObj;
   Color lastColor;
 
   void Update()
