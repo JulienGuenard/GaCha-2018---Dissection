@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 65427412870712354}
   - component: {fileID: 23395906008700618}
   m_Layer: 0
-  m_Name: Veine Jugulaires Internes
+  m_Name: Aorte Descendante
   m_TagString: Artere
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

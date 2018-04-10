@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: a4eb72eb056adcd4e806110172b2cae2
+timeCreated: 1523359446
+licenseType: Free
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - artere: {fileID: 2100000, guid: 6fcf6fbee9b260b4e9d6c406c7d184bb, type: 2}
+  - artere_silhouette: {fileID: 2100000, guid: b50ce856c72a87f44a42e3817a62ef85, type: 2}
+  - organe: {instanceID: 0}
+  - organe_silhouette: {instanceID: 0}
+  - os: {instanceID: 0}
+  - os_silhouette: {instanceID: 0}
+  - materialRenderer: {instanceID: 0}
+  - lastTarget: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
