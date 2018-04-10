@@ -5,13 +5,29 @@ using UnityEngine.UI;
 
 public class NameManager : MonoBehaviour {
 
-	public static string team1;
-	public static string team2;
-	public static string team3;
-	public static string team4;
-	public static string team5;
+    public static string team1;
+    public static string team1Perso;
+    public static int team1Score;
 
-	public InputField n1;
+    public static string team2;
+    public static string team2Perso;
+    public static int team2Score;
+
+    public static string team3;
+    public static string team3Perso;
+    public static int team3Score;
+
+    public static string team4;
+    public static string team4Perso;
+    public static int team4Score;
+
+    public static string team5;
+    public static string team5Perso;
+    public static int team5Score;
+
+    public static int conteurdeTour;
+
+    public InputField n1;
 	public InputField n2;
 	public InputField n3;
 	public InputField n4;
