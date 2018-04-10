@@ -120,7 +120,8 @@ public class HandController : MonoBehaviour
   {
     skinMesh.sharedMesh = Hand1;
     selectedObj.GetComponent<MeshRenderer>().material = lastMat;
-    //   selectedObj = null;
+    disableOutline(lastTarget);
+    selectedObj = null;
   }
 
   void CutArtere()
