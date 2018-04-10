@@ -11,6 +11,8 @@ public class CardManager : MonoBehaviour
   public List<GameObject> listSelectedCard;
   public List<CartesScriptableObject> ScriptableCardList;
   private float maladie;
+    public Button valider;
+    private int compteur;
 
     public static CardManager Instance;
 
@@ -28,13 +30,17 @@ public class CardManager : MonoBehaviour
         Debug.Log(ScriptableCardList[0].description);
   }
 
-  void Update()
-  {
-    if (SceneManager.GetActiveScene().name != SurgeonScene)
-      GoSurgeon();
-  }
+    private void Update()
+    {
+        Button validation = valider.GetComponent<Button>();
 
-  public void ClearList()
+        if(compteur == 4)
+        {
+            validation.onClick.AddListener(GoSurgeon);
+        }
+    }
+
+    public void ClearList()
   {
     listSelectedCard.Clear();
   }
@@ -44,6 +50,7 @@ public class CardManager : MonoBehaviour
     listSelectedCard.Add(card);
     card.GetComponent<UnityEngine.UI.Image>().color = Color.yellow;
     card.GetComponent<UnityEngine.UI.Button>().enabled = false;
+        compteur += 1;
   }
 
   void GoSurgeon()
