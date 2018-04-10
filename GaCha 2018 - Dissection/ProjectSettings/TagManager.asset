@@ -8,6 +8,7 @@ TagManager:
   - Os
   - Organe
   - Casuality
+  - Tool
   layers:
   - Default
   - TransparentFX

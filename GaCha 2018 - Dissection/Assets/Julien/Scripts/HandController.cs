@@ -3,46 +3,99 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.ComponentModel;
 using UnityEngine.Analytics;
+using UnityEditor;
 
 public class HandController : MonoBehaviour
 {
+  public Material artere;
+  public Material artere_silhouette;
+  public Material organe;
+  public Material organe_silhouette;
+  public Material os;
+  public Material os_silhouette;
+  public Material tool;
+  public Material tool_silhouette;
+  public Renderer materialRenderer;
+  public Material[] mats;
+  public GameObject lastTarget;
+
   public float speedRotation;
 
   static public GameObject selectedObj;
-  Color lastColor;
+  static public GameObject dragObj;
+  Material lastMat;
   GameObject hand;
   Transform handPos;
+  Transform handDrag;
+
+  public static HandController Instance;
+
+  void Awake()
+  {
+    Instance = this;
+  }
 
   void Start()
   {
     hand = GameObject.Find("Hand");
-    handPos = GameObject.Find("HandPos").transform;
+//    handPos = GameObject.Find("HandPos").transform;
+    handDrag = GameObject.Find("HandDrag").transform;
   }
 
   void FixedUpdate()
   {
-    if (selectedObj != null && Input.GetKeyDown(KeyCode.Mouse0))
-      CutArtere();
-
-    MoveToPos();
+    // transform.position = handPos.position;
+    // MoveToPos();
     RotateHand();
+
+    if (selectedObj != null && selectedObj.tag == "Artere" && dragObj != null && Input.GetKeyDown(KeyCode.Mouse0) && dragObj.name == "Scalpel" && selectedObj.GetComponent<Rigidbody>().useGravity == false)
+      {
+        CutArtere();
+        return;
+      }
+
+    if (selectedObj != null && selectedObj.tag == "Os" && dragObj != null && Input.GetKeyDown(KeyCode.Mouse0) && dragObj.name == "Scie" && selectedObj.GetComponent<Rigidbody>().useGravity == false)
+      {
+        //   CutOs();
+        return;
+      }
+
+    if (selectedObj != null && dragObj != null && Input.GetKeyDown(KeyCode.Mouse1))
+      {
+        Drop();
+        return;
+      }
+
+    if (selectedObj != null && dragObj == null && Input.GetKeyDown(KeyCode.Mouse0))
+      {
+        Drag();
+        return;
+
+      }
+
+    if (dragObj != null)
+      {
+        DragUpdate();
+        return;
+      }
   }
 
   void OnTriggerEnter(Collider col)
   {
-    if (col.tag == "Artere" || col.tag == "Os" || col.tag == "Organe")
+    if (col.tag == "Artere" || col.tag == "Os" || col.tag == "Organe" || col.tag == "Tool")
       {
         if (selectedObj != null)
           {
             DeselectdArtere(selectedObj);
           }
+        Debug.Log("aaa");
         SelectArtere(col.gameObject);
       }
   }
 
   void OnTriggerExit(Collider col)
   {
-    if (col.tag == "Artere" || col.tag == "Os" || col.tag == "Organe")
+    if (col.tag == "Artere" || col.tag == "Os" || col.tag == "Organe" || col.tag == "Tool")
       {
         if (selectedObj != null && col.gameObject.name == selectedObj.name)
           {
@@ -53,14 +106,14 @@ public class HandController : MonoBehaviour
 
   void SelectArtere(GameObject obj)
   {
-    lastColor = obj.GetComponent<MeshRenderer>().material.color;
-    obj.GetComponent<MeshRenderer>().material.color = Color.yellow;
+    lastMat = obj.GetComponent<MeshRenderer>().material;
     selectedObj = obj;
+    activateOutline(obj);
   }
 
   void DeselectdArtere(GameObject obj)
   {
-    selectedObj.GetComponent<MeshRenderer>().material.color = lastColor;
+    selectedObj.GetComponent<MeshRenderer>().material = lastMat;
     selectedObj = null;
   }
 
@@ -68,15 +121,18 @@ public class HandController : MonoBehaviour
   {
     selectedObj.GetComponent<Rigidbody>().useGravity = true;
     selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-    selectedObj.GetComponentInParent<OrganeData>().listArtere.Remove(selectedObj);
-    DeselectdArtere(selectedObj);
-    selectedObj = null;
+    if (selectedObj.GetComponentInParent<OrganeData>() != null)
+      selectedObj.GetComponentInParent<OrganeData>().listArtere.Remove(selectedObj);
+      
+    //DeselectdArtere(selectedObj);
+    //selectedObj = null;
   }
-
+  
+  /*
   void MoveToPos()
   {
     transform.position = handPos.position;
-  }
+  }*/
 
   void RotateHand()
   {
@@ -92,5 +148,99 @@ public class HandController : MonoBehaviour
       
     if (!(transform.localRotation.eulerAngles.x > 45 && transform.localRotation.eulerAngles.x < 120) && Input.GetAxis("Vertical") < 0)
       hand.transform.localRotation = Quaternion.Euler(hand.transform.localRotation.eulerAngles.x + -Input.GetAxis("Vertical") * speedRotation, hand.transform.localRotation.eulerAngles.y, 0);
+  }
+
+  void Drag()
+  {
+    if (selectedObj.GetComponent<Rigidbody>().useGravity == true)
+      {
+        dragObj = selectedObj;
+        GetComponent<BoxCollider>().enabled = false;
+      }
+  }
+
+  void DragUpdate()
+  {
+    dragObj.transform.position = handDrag.position;
+  }
+
+  void Drop()
+  {
+    GetComponent<BoxCollider>().enabled = true;
+    dragObj = null;
+  }
+
+  void activateOutline(GameObject obj)
+  {
+    if (lastTarget != null)
+      {
+        if (lastTarget != obj.transform.gameObject)
+          disableOutline(lastTarget);
+      }
+    //        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+    //        Debug.Log(hit.transform.gameObject);
+    materialRenderer = obj.transform.GetComponent<Renderer>();
+    if (materialRenderer == null)
+      {
+        disableOutline(lastTarget);
+        return;
+      }
+    mats = materialRenderer.materials;
+
+    //Here, you have to assign with the exact order!
+    if (obj.transform.CompareTag("Artere") == true)
+      {
+        mats[0] = artere_silhouette;
+      }
+      //Here, you have to assign with the exact order!
+      else if (obj.transform.CompareTag("Organe") == true)
+      {
+        mats[0] = organe_silhouette;
+      }
+      //Here, you have to assign with the exact order!
+      else if (obj.transform.CompareTag("Os") == true)
+      {
+        mats[0] = os_silhouette;
+      } else if (obj.transform.CompareTag("Tool") == true)
+      {
+        mats[0] = tool_silhouette;
+      }
+
+    materialRenderer.materials = mats;
+    lastTarget = obj.transform.gameObject;
+  }
+
+  void disableOutline(GameObject lastTarget)
+  {
+    if (materialRenderer == null)
+      {
+        return;
+      }
+    mats = materialRenderer.materials;
+    //Here, you have to assign with the exact order!
+    if (lastTarget.transform.CompareTag("Artere") == true)
+      {
+        mats[0] = artere;
+      }
+      //Here, you have to assign with the exact order!
+      else if (lastTarget.transform.CompareTag("Organe") == true)
+      {
+        mats[0] = organe;
+      }
+      //Here, you have to assign with the exact order!
+      else if (lastTarget.transform.CompareTag("Os") == true)
+      {
+        mats[0] = os;
+      } else if (lastTarget.transform.CompareTag("Tool") == true)
+      {
+        mats[0] = lastMat;
+      } else
+      {
+        return;
+      }
+
+    materialRenderer.materials = mats;
+    materialRenderer = null;
+
   }
 }
