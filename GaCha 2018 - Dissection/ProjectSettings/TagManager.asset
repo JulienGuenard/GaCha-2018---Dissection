@@ -9,6 +9,7 @@ TagManager:
   - Organe
   - Casuality
   - Tool
+  - Outil
   layers:
   - Default
   - TransparentFX

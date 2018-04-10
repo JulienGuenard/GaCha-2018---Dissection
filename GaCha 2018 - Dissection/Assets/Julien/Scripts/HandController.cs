@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.ComponentModel;
 using UnityEngine.Analytics;
-using UnityEditor;
 
 public class HandController : MonoBehaviour
 {
@@ -22,17 +21,23 @@ public class HandController : MonoBehaviour
   public float speedRotation;
 
   static public GameObject selectedObj;
-  static public GameObject dragObj;
+  public GameObject dragObj;
   Material lastMat;
   GameObject hand;
   Transform handPos;
   Transform handDrag;
+
+  SkinnedMeshRenderer skinMesh;
+  public Mesh Hand1;
+  public Mesh Hand2;
+  public Mesh Hand3;
 
   public static HandController Instance;
 
   void Awake()
   {
     Instance = this;
+    skinMesh = GameObject.Find("Hand_1").GetComponent<SkinnedMeshRenderer>();
   }
 
   void Start()
@@ -56,7 +61,7 @@ public class HandController : MonoBehaviour
 
     if (selectedObj != null && selectedObj.tag == "Os" && dragObj != null && Input.GetKeyDown(KeyCode.Mouse0) && dragObj.name == "Scie" && selectedObj.GetComponent<Rigidbody>().useGravity == false)
       {
-        //   CutOs();
+        CutOs();
         return;
       }
 
@@ -105,6 +110,7 @@ public class HandController : MonoBehaviour
 
   void SelectArtere(GameObject obj)
   {
+    skinMesh.sharedMesh = Hand2;
     lastMat = obj.GetComponent<MeshRenderer>().material;
     selectedObj = obj;
     activateOutline(obj);
@@ -112,8 +118,9 @@ public class HandController : MonoBehaviour
 
   void DeselectdArtere(GameObject obj)
   {
+    skinMesh.sharedMesh = Hand1;
     selectedObj.GetComponent<MeshRenderer>().material = lastMat;
-    selectedObj = null;
+    //   selectedObj = null;
   }
 
   void CutArtere()
@@ -122,9 +129,14 @@ public class HandController : MonoBehaviour
     selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
     if (selectedObj.GetComponentInParent<OrganeData>() != null)
       selectedObj.GetComponentInParent<OrganeData>().listArtere.Remove(selectedObj);
-      
-    //DeselectdArtere(selectedObj);
-    //selectedObj = null;
+
+    selectedObj = null;
+  }
+
+  void CutOs()
+  {
+    selectedObj.GetComponent<Rigidbody>().useGravity = true;
+    selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
   }
   
   /*
@@ -153,8 +165,10 @@ public class HandController : MonoBehaviour
   {
     if (selectedObj.GetComponent<Rigidbody>().useGravity == true)
       {
+        skinMesh.sharedMesh = Hand3;
         dragObj = selectedObj;
-        GetComponent<BoxCollider>().enabled = false;
+        dragObj.GetComponent<Rigidbody>().useGravity = false;
+        
       }
   }
 
@@ -165,7 +179,8 @@ public class HandController : MonoBehaviour
 
   public void Drop()
   {
-    GetComponent<BoxCollider>().enabled = true;
+    skinMesh.sharedMesh = Hand1;
+    dragObj.GetComponent<Rigidbody>().useGravity = true;
     dragObj = null;
   }
 
@@ -189,19 +204,23 @@ public class HandController : MonoBehaviour
     //Here, you have to assign with the exact order!
     if (obj.transform.CompareTag("Artere") == true)
       {
+        lastMat = mats[0];
         mats[0] = artere_silhouette;
       }
       //Here, you have to assign with the exact order!
       else if (obj.transform.CompareTag("Organe") == true)
       {
+        lastMat = mats[0];
         mats[0] = organe_silhouette;
       }
       //Here, you have to assign with the exact order!
       else if (obj.transform.CompareTag("Os") == true)
       {
+        lastMat = mats[0];
         mats[0] = os_silhouette;
       } else if (obj.transform.CompareTag("Tool") == true)
       {
+        lastMat = mats[0];
         mats[0] = tool_silhouette;
       }
 
@@ -219,17 +238,17 @@ public class HandController : MonoBehaviour
     //Here, you have to assign with the exact order!
     if (lastTarget.transform.CompareTag("Artere") == true)
       {
-        mats[0] = artere;
+        mats[0] = lastMat;
       }
       //Here, you have to assign with the exact order!
       else if (lastTarget.transform.CompareTag("Organe") == true)
       {
-        mats[0] = organe;
+        mats[0] = lastMat;
       }
       //Here, you have to assign with the exact order!
       else if (lastTarget.transform.CompareTag("Os") == true)
       {
-        mats[0] = os;
+        mats[0] = lastMat;
       } else if (lastTarget.transform.CompareTag("Tool") == true)
       {
         mats[0] = lastMat;
