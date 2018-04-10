@@ -88,7 +88,6 @@ public class HandController : MonoBehaviour
           {
             DeselectdArtere(selectedObj);
           }
-        Debug.Log("aaa");
         SelectArtere(col.gameObject);
       }
   }

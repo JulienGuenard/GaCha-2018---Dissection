@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EventAide : MonoBehaviour {
+public class EventHelp : MonoBehaviour {
 
     public static System.Action help;
     public static System.Action dontHelp;
