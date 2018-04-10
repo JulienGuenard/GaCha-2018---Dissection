@@ -21,6 +21,7 @@ public class ArmController : MonoBehaviour
   void Start()
   {
     HandPos = GameObject.Find("HandPos");
+    // Han
   }
 
   void Update()
@@ -46,6 +47,7 @@ public class ArmController : MonoBehaviour
       speedZ = -maxSpeed;
 
     transform.position += new Vector3(speedX, 0, speedZ);
+    
     CheckBounds();
   }
 
