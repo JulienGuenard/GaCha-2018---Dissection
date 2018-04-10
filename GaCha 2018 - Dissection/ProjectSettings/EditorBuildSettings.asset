@@ -6,8 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Julien/Scenes/julien - Cards.unity
-    guid: 5367369fc57247d41936ab45fc7dfb6d
-  - enabled: 1
-    path: Assets/Julien/Scenes/julien - Surgeon.unity
+    path: Assets/Julien/Scenes/MainGame.unity
     guid: 4a285a55a490875408ec62507541483b
+  - enabled: 1
+    path: Assets/Julien/Scenes/CardMenu.unity
+    guid: 5367369fc57247d41936ab45fc7dfb6d

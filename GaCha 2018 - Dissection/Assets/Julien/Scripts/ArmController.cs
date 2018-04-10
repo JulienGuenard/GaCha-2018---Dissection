@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Experimental.UIElements;
-using UnityEditor;
 
 public class ArmController : MonoBehaviour
 {
@@ -21,6 +20,7 @@ public class ArmController : MonoBehaviour
   void Start()
   {
     HandPos = GameObject.Find("HandPos");
+    // Han
   }
 
   void Update()
@@ -46,6 +46,7 @@ public class ArmController : MonoBehaviour
       speedZ = -maxSpeed;
 
     transform.position += new Vector3(speedX, 0, speedZ);
+    
     CheckBounds();
   }
 

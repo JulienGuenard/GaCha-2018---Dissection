@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Experimental.UIElements;
-using UnityEditor;
 
 public class CameraController : MonoBehaviour
 {
@@ -17,7 +16,7 @@ public class CameraController : MonoBehaviour
 
   void Start()
   {
-    hand = GameObject.Find("Arm").transform;
+    hand = GameObject.Find("Hand").transform;
     handOrigin = hand.position;
     cameraOrigin = transform.position;
     offset = cameraOrigin - handOrigin;
