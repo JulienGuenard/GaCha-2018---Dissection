@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System;
-using UnityEngine.Experimental.UIElements;
 using UnityEngine.UI;
 
 public class CardManager : MonoBehaviour
@@ -12,11 +10,13 @@ public class CardManager : MonoBehaviour
   public List<GameObject> listCard;
   public List<GameObject> listSelectedCard;
   public List<CartesScriptableObject> ScriptableCardList;
+  private float maladie;
 
     public static CardManager Instance;
 
   void Awake()
   {
+    DistributionCard();
     if (Instance == null)
       {
         DontDestroyOnLoad(this.gameObject);
@@ -54,4 +54,37 @@ public class CardManager : MonoBehaviour
         SceneManager.LoadScene(SurgeonScene, LoadSceneMode.Single);
       }
   }
+
+
+    public void DistributionCard()
+    {
+        maladie = 1;
+        Debug.Log(maladie);
+        if(maladie == 1)
+        {
+
+            Image cardimage1 = listCard[0].GetComponent<Image>();
+            cardimage1.sprite = ScriptableCardList[0].imageCard;
+
+            listCard[0].gameObject.transform.GetChild(1).GetComponent<Text>().text = ScriptableCardList[0].description;
+            listCard[0].gameObject.transform.GetChild(0).GetComponent<Text>().text = ScriptableCardList[0].score.ToString() + " points";
+        }
+        if(maladie == 2)
+        {
+
+        }
+        if(maladie == 3)
+        {
+
+        }
+        if(maladie == 4)
+        {
+
+        }
+        if(maladie == 5)
+        {
+
+        }
+    }
+
 }
