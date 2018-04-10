@@ -26,6 +26,7 @@ public class EventHelp : MonoBehaviour {
         yield return new WaitForSeconds(120f);
         if(waitForHelp == true)
         {
+            Debug.Log("Help");
             help();
         }
     }

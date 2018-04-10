@@ -163,7 +163,7 @@ public class HandController : MonoBehaviour
     dragObj.transform.position = handDrag.position;
   }
 
-  void Drop()
+  public void Drop()
   {
     GetComponent<BoxCollider>().enabled = true;
     dragObj = null;
