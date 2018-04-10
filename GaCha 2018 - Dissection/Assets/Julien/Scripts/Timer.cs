@@ -44,7 +44,7 @@ public class Timer : MonoBehaviour
           }
       }
     textTime.text = actualTimeMinute.ToString() + ":" + actualTimeSeconde.ToString();
-    yield return new WaitForSeconds(0.01f);
+    yield return new WaitForSeconds(1f);
     StartCoroutine(Decompte()); 
   }
 }
