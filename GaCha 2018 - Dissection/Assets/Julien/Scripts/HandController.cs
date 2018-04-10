@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.ComponentModel;
 
 public class HandController : MonoBehaviour
 {
@@ -11,12 +12,7 @@ public class HandController : MonoBehaviour
   void Update()
   {
     if (selectedObj != null && Input.GetKeyDown(KeyCode.Mouse0))
-      {
-        selectedObj.GetComponent<Rigidbody>().useGravity = true;
-        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-        DeselectdArtere(selectedObj);
-        selectedObj = null;
-      }
+      CutArtere();
   }
 
   void OnTriggerEnter(Collider col)
@@ -52,6 +48,15 @@ public class HandController : MonoBehaviour
   void DeselectdArtere(GameObject obj)
   {
     selectedObj.GetComponent<MeshRenderer>().material.color = lastColor;
+    selectedObj = null;
+  }
+
+  void CutArtere()
+  {
+    selectedObj.GetComponent<Rigidbody>().useGravity = true;
+    selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+    selectedObj.GetComponentInParent<OrganeData>().listArtere.Remove(selectedObj);
+    DeselectdArtere(selectedObj);
     selectedObj = null;
   }
 }

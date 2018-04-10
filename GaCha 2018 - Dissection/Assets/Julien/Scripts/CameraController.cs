@@ -21,6 +21,7 @@ public class CameraController : MonoBehaviour
     handOrigin = hand.position;
     cameraOrigin = transform.position;
     offset = cameraOrigin - handOrigin;
+    Cursor.lockState = CursorLockMode.Locked;
   }
 
   void Update()

@@ -12,11 +12,6 @@ public class ArmController : MonoBehaviour
   public float cameraSpeed;
   public float maxSpeed;
 
-  void Start()
-  {
-    Cursor.lockState = CursorLockMode.Locked;
-  }
-
   void Update()
   {
     Move();
