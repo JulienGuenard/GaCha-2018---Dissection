@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.ComponentModel;
 using UnityEngine.Analytics;
-using UnityEditor;
 
 public class HandController : MonoBehaviour
 {
@@ -22,7 +21,7 @@ public class HandController : MonoBehaviour
   public float speedRotation;
 
   static public GameObject selectedObj;
-  static public GameObject dragObj;
+  public GameObject dragObj;
   Material lastMat;
   GameObject hand;
   Transform handPos;
@@ -56,7 +55,7 @@ public class HandController : MonoBehaviour
 
     if (selectedObj != null && selectedObj.tag == "Os" && dragObj != null && Input.GetKeyDown(KeyCode.Mouse0) && dragObj.name == "Scie" && selectedObj.GetComponent<Rigidbody>().useGravity == false)
       {
-        //   CutOs();
+        CutOs();
         return;
       }
 
@@ -114,7 +113,7 @@ public class HandController : MonoBehaviour
   void DeselectdArtere(GameObject obj)
   {
     selectedObj.GetComponent<MeshRenderer>().material = lastMat;
-    selectedObj = null;
+    //   selectedObj = null;
   }
 
   void CutArtere()
@@ -123,9 +122,14 @@ public class HandController : MonoBehaviour
     selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
     if (selectedObj.GetComponentInParent<OrganeData>() != null)
       selectedObj.GetComponentInParent<OrganeData>().listArtere.Remove(selectedObj);
-      
-    //DeselectdArtere(selectedObj);
-    //selectedObj = null;
+
+    selectedObj = null;
+  }
+
+  void CutOs()
+  {
+    selectedObj.GetComponent<Rigidbody>().useGravity = true;
+    selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
   }
   
   /*
@@ -155,7 +159,8 @@ public class HandController : MonoBehaviour
     if (selectedObj.GetComponent<Rigidbody>().useGravity == true)
       {
         dragObj = selectedObj;
-        GetComponent<BoxCollider>().enabled = false;
+        dragObj.GetComponent<Rigidbody>().useGravity = false;
+        
       }
   }
 
@@ -166,7 +171,7 @@ public class HandController : MonoBehaviour
 
   void Drop()
   {
-    GetComponent<BoxCollider>().enabled = true;
+    dragObj.GetComponent<Rigidbody>().useGravity = true;
     dragObj = null;
   }
 
