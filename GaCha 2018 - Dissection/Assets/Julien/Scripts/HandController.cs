@@ -178,7 +178,7 @@ public class HandController : MonoBehaviour
     dragObj.transform.position = handDrag.position;
   }
 
-  void Drop()
+  public void Drop()
   {
     skinMesh.sharedMesh = Hand1;
     dragObj.GetComponent<Rigidbody>().useGravity = true;

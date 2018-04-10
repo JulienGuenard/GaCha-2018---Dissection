@@ -5,10 +5,17 @@ using UnityEngine;
 public class EventTremblement : MonoBehaviour {
 
     public static System.Action erreur;
+    public Timer timer;
 
-    void OnTriggerEnter(Collider other)
+    void Start()
     {
-        erreur();
+        StartCoroutine(FinProche());
     }
 
+
+    IEnumerator FinProche() // fais un tremblement quand la fin d'une partie est proche
+    {
+        yield return new WaitForSeconds(timer.maxTime - 6);
+        erreur();
+    }
 }

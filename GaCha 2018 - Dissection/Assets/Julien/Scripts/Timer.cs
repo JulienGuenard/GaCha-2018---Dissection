@@ -7,7 +7,7 @@ public class Timer : MonoBehaviour
 {
 
   public int maxTime;
-  int actualTime;
+  public int actualTime;
   Text textTime;
 
   // Use this for initialization
