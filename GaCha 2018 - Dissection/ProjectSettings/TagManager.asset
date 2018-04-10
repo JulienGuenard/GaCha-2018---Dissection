@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Artere
+  - Os
+  - Organe
+  - Casuality
   layers:
   - Default
   - TransparentFX
