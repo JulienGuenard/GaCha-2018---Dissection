@@ -83,9 +83,7 @@ public class HandController : MonoBehaviour
     if (!(transform.localRotation.eulerAngles.x < 315 && transform.localRotation.eulerAngles.x > 200) && Input.GetAxis("Vertical") > 0)
       hand.transform.localRotation = Quaternion.Euler(hand.transform.localRotation.eulerAngles.x + -Input.GetAxis("Vertical") * speedRotation, hand.transform.localRotation.eulerAngles.y, 0);
       
-
     if (!(transform.localRotation.eulerAngles.x > 45 && transform.localRotation.eulerAngles.x < 120) && Input.GetAxis("Vertical") < 0)
       hand.transform.localRotation = Quaternion.Euler(hand.transform.localRotation.eulerAngles.x + -Input.GetAxis("Vertical") * speedRotation, hand.transform.localRotation.eulerAngles.y, 0);
-
   }
 }
