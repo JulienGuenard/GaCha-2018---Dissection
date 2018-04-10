@@ -15,13 +15,12 @@ public class ArmController : MonoBehaviour
   void Update()
   {
     Move();
-    MoveForward();
   }
 
   void Move()
   {
     float speedX = Input.GetAxis("Mouse X") * cameraSpeed;
-    float speedY = Input.GetAxis("Mouse Y") * cameraSpeed;
+    float speedZ = Input.GetAxis("Mouse Y") * cameraSpeed;
 
     if (speedX > maxSpeed)
       speedX = maxSpeed;
@@ -29,17 +28,12 @@ public class ArmController : MonoBehaviour
     if (speedX < -maxSpeed)
       speedX = -maxSpeed;
 
-    if (speedY > maxSpeed)
-      speedY = maxSpeed;
+    if (speedZ > maxSpeed)
+      speedZ = maxSpeed;
 
-    if (speedY < -maxSpeed)
-      speedY = -maxSpeed;
+    if (speedZ < -maxSpeed)
+      speedZ = -maxSpeed;
 
-    transform.position += new Vector3(speedX, speedY, 0);
-  }
-
-  void MoveForward()
-  {
-    transform.position += new Vector3(0, 0, Input.GetAxis("Vertical"));
+    transform.position += new Vector3(speedX, 0, speedZ);
   }
 }
