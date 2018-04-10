@@ -11,8 +11,9 @@ public class CardManager : MonoBehaviour
   public string SurgeonScene;
   public List<GameObject> listCard;
   public List<GameObject> listSelectedCard;
+  public List<CartesScriptableObject> ScriptableCardList;
 
-  public static CardManager Instance;
+    public static CardManager Instance;
 
   void Awake()
   {
@@ -24,6 +25,7 @@ public class CardManager : MonoBehaviour
       {
         Destroy(this.gameObject);
       }
+        Debug.Log(ScriptableCardList[0].description);
   }
 
   void Update()
