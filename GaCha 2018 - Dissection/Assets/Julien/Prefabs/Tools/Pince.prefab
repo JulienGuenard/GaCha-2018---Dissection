@@ -20,10 +20,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4444680938097936}
   - component: {fileID: 33819307862174974}
-  - component: {fileID: 65380744242336940}
   - component: {fileID: 23021465526068874}
   - component: {fileID: 114015221260231626}
   - component: {fileID: 54566967120692658}
+  - component: {fileID: 65524849231471534}
   m_Layer: 0
   m_Name: Pince
   m_TagString: Tool
@@ -100,7 +100,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65380744242336940
+--- !u!65 &65524849231471534
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -110,8 +110,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 0.7352797, y: 0.1, z: 1.6153553}
+  m_Center: {x: -0.00000044608075, y: 0, z: -0.032013535}
 --- !u!114 &114015221260231626
 MonoBehaviour:
   m_ObjectHideFlags: 1
