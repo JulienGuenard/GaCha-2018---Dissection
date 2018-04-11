@@ -69,7 +69,6 @@ public class CardManager : MonoBehaviour
   public void DistributionCard()
   {
     maladie = Random.Range(1, 6);
-    Debug.Log(maladie);
     if (maladie == 1)
       {
 

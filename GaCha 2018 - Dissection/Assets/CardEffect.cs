@@ -7,7 +7,9 @@ public class CardEffect : MonoBehaviour
 
     public bool validated;
     public string nameToCheck;
-
+    public int nbDecoupes;
+    public int maxDecoupes;
+    public float maxTimeLeft;
 
     // Use this for initialization
     void Start()
@@ -24,7 +26,8 @@ public class CardEffect : MonoBehaviour
         }
         if (name == "Peste3")
         {
-            WaitBeforeEnd();
+            maxTimeLeft = 20;
+            GameManager.endRound += checkRoundTime;
         }
 
         if (name == "Peste4")
@@ -33,15 +36,45 @@ public class CardEffect : MonoBehaviour
             EventPose.pose += CheckName;
         }
 
-        if (name == "Peste4")
+        if (name == "Peste5")
+        {
+            maxDecoupes = 10;
+            HandController.prelevement += IncrementNbMove;
+        }
+
+        if (name == "Peste6")
+        {
+            nameToCheck = "Diaphragme";
+            EventPose.pose += CheckName;
+        }
+        if (name == "Syphilis1")
+        {
+            nameToCheck = "Estomac";
+            EventPose.pose += CheckName;
+        }
+        if (name == "Syphilis2")
+        {
+            nameToCheck = "Estomac";
+            EventPose.pose += CheckName;
+        }
+        if (name == "Syphilis3")
+        {
+            GameManager.endRound += checkRoundTime;
+        }
+
+        if (name == "Syphilis4")
         {
             nameToCheck = "Thyroide";
             EventPose.pose += CheckName;
         }
 
-        if (name == "Peste4")
+        if (name == "Syphilis5")
         {
-            nameToCheck = "Thyroide";
+        }
+
+        if (name == "Syphilis6")
+        {
+            nameToCheck = "Diaphragme";
             EventPose.pose += CheckName;
         }
     }
@@ -58,16 +91,27 @@ public class CardEffect : MonoBehaviour
 
     void CheckName(string candidateName)
     {
-        if(candidateName == nameToCheck)
+        if (candidateName == nameToCheck)
         {
             Validate();
         }
     }
 
-    IEnumerator WaitBeforeEnd()
+    void IncrementNbMove()
     {
-        yield return new WaitForSeconds(160);
-        UnValidate();
+        nbDecoupes++;
+        if(nbDecoupes >= maxDecoupes)
+        {
+            UnValidate();
+        }
+    }
+
+    void checkRoundTime(float timeLeft)
+    {
+        if(timeLeft >= maxTimeLeft)
+        {
+            Validate();
+        }
     }
 
 }

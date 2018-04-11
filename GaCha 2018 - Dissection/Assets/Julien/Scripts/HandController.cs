@@ -36,7 +36,9 @@ public class HandController : MonoBehaviour
 
   Transform offsetRay;
 
-  public static HandController Instance;
+    public static System.Action prelevement;
+
+    public static HandController Instance;
 
   void Awake()
   {
@@ -234,7 +236,7 @@ public class HandController : MonoBehaviour
         dragObj = selectedObj;
         //  dragObj.GetComponent<Rigidbody>().useGravity = false;
         dragObj.GetComponent<Rigidbody>().isKinematic = false;
-
+            prelevement();
         
       }
   }

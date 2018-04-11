@@ -14390,8 +14390,13 @@ Prefab:
     - target: {fileID: 114627382282947080, guid: 66133edeaa0fa3d4aa7a85d7f7556a15,
         type: 2}
       propertyPath: CardScene
-      value: CardMenu
+      value: CustomizationMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 114627382282947080, guid: 66133edeaa0fa3d4aa7a85d7f7556a15,
+        type: 2}
+      propertyPath: timer
+      value: 
+      objectReference: {fileID: 540402745}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66133edeaa0fa3d4aa7a85d7f7556a15, type: 2}
   m_IsPrefabParent: 0
