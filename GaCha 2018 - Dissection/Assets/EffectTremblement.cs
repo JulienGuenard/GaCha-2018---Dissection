@@ -40,7 +40,7 @@ public class EffectTremblement : MonoBehaviour
   {
     if (Tremblemement)
       {
-        bras.transform.position += new Vector3(Random.Range(-0.5f, 0.5f), 0, Random.Range(-0.05f, 0.05f));
+        bras.transform.position += new Vector3(Random.Range(-0.005f, 0.005f), 0, Random.Range(-0.0005f, 0.0005f));
       }
   }
 }

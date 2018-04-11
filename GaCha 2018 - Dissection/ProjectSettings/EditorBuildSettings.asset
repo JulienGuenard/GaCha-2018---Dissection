@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Julien/Scenes/MainGame.unity
     guid: 5f34ff27a308afd40a53c6900c95273a
+  - enabled: 1
+    path: Assets/Julien/Scenes/CardMenu.unity
+    guid: 5367369fc57247d41936ab45fc7dfb6d

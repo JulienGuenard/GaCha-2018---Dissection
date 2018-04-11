@@ -4,13 +4,10 @@ using UnityEngine;
 
 public class EventPose : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public static System.Action<string> pose;
+
+    void OnTriggerEnter(Collider col)
+    {
+        pose(col.transform.name);
+    }
 }
