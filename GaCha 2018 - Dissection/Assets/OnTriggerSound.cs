@@ -16,7 +16,8 @@ public class OnTriggerSound : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.transform.name == "Sol")
+        Debug.Log("a");
+        if(collision.transform.tag == "Os")
         {
             RandomSound();
         }
