@@ -16,10 +16,14 @@ public class CardManager : MonoBehaviour
 
   Button validation;
 
+  GameObject feedbackScore;
+
   public static CardManager Instance;
 
   void Awake()
   {
+
+
     validation = valider.GetComponent<Button>();
     DistributionCard();
     if (Instance == null)
@@ -339,10 +343,13 @@ public class CardManager : MonoBehaviour
           {
             if (obj.name == nameOrgane)
               {
-                ScoreManager.MarquerPoints(obj.score);
+                ScoreManager.Instance.MarquerPoints(obj.score);
                 listSelectedCard.Remove(obj);
+                
               }
           }
       }
   }
+
+
 }
