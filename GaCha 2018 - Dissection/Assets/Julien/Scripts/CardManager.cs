@@ -12,7 +12,7 @@ public class CardManager : MonoBehaviour
   public List<CartesScriptableObject> ScriptableCardList;
   private float maladie;
     public Button valider;
-    private int compteur;
+    public int compteur;
 
     public static CardManager Instance;
 
@@ -47,6 +47,8 @@ public class CardManager : MonoBehaviour
 
   public void AddCard(GameObject card)
   {
+        if (compteur > 3)
+            return;
     listSelectedCard.Add(card);
     card.GetComponent<UnityEngine.UI.Image>().color = Color.yellow;
     card.GetComponent<UnityEngine.UI.Button>().enabled = false;
