@@ -15,4 +15,4 @@ MonoBehaviour:
   description: "Finir l'op\xE9ration en moins de 10 d\xE9coupes."
   score: 10
   imageCard: {fileID: 21300000, guid: 38fd9c7716a48ff4aab2f06cbb83be6e, type: 3}
-  tailleText: 12
+  tailleText: 10
