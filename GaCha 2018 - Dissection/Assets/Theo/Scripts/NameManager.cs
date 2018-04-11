@@ -8,19 +8,11 @@ public class NameManager : MonoBehaviour {
 	public static int cptTours = 1;
 
 	public static string team1;
-	public static int scoreTeam1 = 0;
-
 	public static string team2;
-	public static int scoreTeam2 = 0;
-
 	public static string team3;
-	public static int scoreTeam3 = 0;
-
 	public static string team4;
-	public static int scoreTeam4 = 0;
-
 	public static string team5;
-	public static int scoreTeam5 = 0;
+
 
 
 	public void lancerNostra() {
@@ -47,19 +39,19 @@ public class NameManager : MonoBehaviour {
 	public void lancerAndre() {
 		switch (cptTours) {
 		case 1: 
-			team1 = "Nostradamus";
+			team1 = "Vesale";
 			break;
 		case 2: 
-			team2 = "Nostradamus";
+			team2 = "Vesale";
 			break;
 		case 3: 
-			team3 = "Nostradamus";
+			team3 = "Vesale";
 			break;
 		case 4: 
-			team4 = "Nostradamus";
+			team4 = "Vesale";
 			break;
 		case 5: 
-			team5 = "Nostradamus";
+			team5 = "Vesale";
 			break;
 		}
 		Buttons.CardsMenu ();
@@ -68,19 +60,19 @@ public class NameManager : MonoBehaviour {
 	public void lancerRondelet() {
 		switch (cptTours) {
 		case 1: 
-			team1 = "Nostradamus";
+			team1 = "Rondelet";
 			break;
 		case 2: 
-			team2 = "Nostradamus";
+			team2 = "Rondelet";
 			break;
 		case 3: 
-			team3 = "Nostradamus";
+			team3 = "Rondelet";
 			break;
 		case 4: 
-			team4 = "Nostradamus";
+			team4 = "Rondelet";
 			break;
 		case 5: 
-			team5 = "Nostradamus";
+			team5 = "Rondelet";
 			break;
 		}
 		Buttons.CardsMenu ();

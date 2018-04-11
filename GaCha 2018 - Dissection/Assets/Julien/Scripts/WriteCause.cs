@@ -21,11 +21,16 @@ public class WriteCause : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    /* if (Input.GetKeyDown(KeyCode.Return) && )
+    if (Input.GetKeyDown(KeyCode.Return) && nameField.activeInHierarchy == true)
+      {
+        GameManager.Instance.EndRound();
+      }
+
+    if (Input.GetKeyDown(KeyCode.Return) && nameField.activeInHierarchy != true)
       {
         nameField.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
-      }*/
+      }
 
   }
 }

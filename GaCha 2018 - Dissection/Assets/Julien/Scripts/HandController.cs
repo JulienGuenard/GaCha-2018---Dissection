@@ -34,6 +34,8 @@ public class HandController : MonoBehaviour
 
   GameObject DroppedItem;
 
+  Transform offsetRay;
+
   public static HandController Instance;
 
   void Awake()
@@ -48,6 +50,7 @@ public class HandController : MonoBehaviour
 //    handPos = GameObject.Find("HandPos").transform;
     handDrag = GameObject.Find("HandDrag").transform;
     DroppedItem = GameObject.Find("DroppedItem");
+    offsetRay = GameObject.Find("offsetRay").transform;
   }
 
   void FixedUpdate()
@@ -55,6 +58,30 @@ public class HandController : MonoBehaviour
     // transform.position = handPos.position;
     // MoveToPos();
     RotateHand();
+
+
+    Debug.DrawRay(offsetRay.position, -offsetRay.up, Color.red, 0.01f);
+    Ray ray;
+    RaycastHit hit;
+
+    if (Physics.Raycast(offsetRay.position, -offsetRay.up, out hit))
+      {
+        if (hit.transform.tag == "Artere" || hit.transform.tag == "Os" || hit.transform.tag == "Organe" || hit.transform.tag == "Outil")
+          {
+            if (selectedObj != null)
+              {
+                DeselectArtere(selectedObj);
+              }
+            SelectArtere(hit.transform.gameObject);
+          } else
+          {
+            DeselectArtere(selectedObj);
+          }
+      } else
+      {
+        DeselectArtere(selectedObj);
+
+      }
 
     if (selectedObj != null)
       {
@@ -102,7 +129,7 @@ public class HandController : MonoBehaviour
         return;
       }
   }
-
+  /*
   void OnTriggerEnter(Collider col)
   {
     if (col.tag == "Artere" || col.tag == "Os" || col.tag == "Organe" || col.tag == "Outil")
@@ -124,20 +151,36 @@ public class HandController : MonoBehaviour
             DeselectdArtere(col.gameObject);
           }
       }
-  }
+  }*/
 
   void SelectArtere(GameObject obj)
   {
     skinMesh.sharedMesh = Hand2;
-    lastMat = obj.GetComponent<MeshRenderer>().material;
+    if (obj.transform.GetComponent<Renderer>() != null)
+      {
+        lastMat = obj.GetComponent<MeshRenderer>().material;
+      } else if (obj.transform.GetComponentInChildren<Renderer>() != null)
+      {
+        lastMat = obj.GetComponentInChildren<MeshRenderer>().material;
+      }
     selectedObj = obj;
-    activateOutline(obj);
+    if (dragObj == null)
+      activateOutline(obj);
   }
 
-  void DeselectdArtere(GameObject obj)
+  void DeselectArtere(GameObject obj)
   {
+    if (obj == null)
+      return;
     skinMesh.sharedMesh = Hand1;
-    selectedObj.GetComponent<MeshRenderer>().material = lastMat;
+    if (selectedObj.transform.GetComponent<Renderer>() != null)
+      {
+        selectedObj.GetComponent<MeshRenderer>().material = lastMat;
+      } else if (selectedObj.transform.GetComponentInChildren<Renderer>() != null)
+      {
+        selectedObj.GetComponentInChildren<MeshRenderer>().material = lastMat;
+      }
+
     disableOutline(lastTarget);
     selectedObj = null;
   }
@@ -189,21 +232,25 @@ public class HandController : MonoBehaviour
         selectedObj.transform.parent = transform; 
         skinMesh.sharedMesh = Hand3;
         dragObj = selectedObj;
-        dragObj.GetComponent<Rigidbody>().useGravity = false;
+        //  dragObj.GetComponent<Rigidbody>().useGravity = false;
+        dragObj.GetComponent<Rigidbody>().isKinematic = false;
+
         
       }
   }
 
   void DragUpdate()
   {
+      
     dragObj.transform.position = handDrag.position;
+    dragObj.GetComponent<Rigidbody>().velocity = Vector2.zero;
   }
 
   public void Drop()
   {
     dragObj.transform.parent = DroppedItem.transform; 
     skinMesh.sharedMesh = Hand1;
-    dragObj.GetComponent<Rigidbody>().useGravity = true;
+    //  dragObj.GetComponent<Rigidbody>().useGravity = true;
     dragObj = null;
   }
 
@@ -216,7 +263,14 @@ public class HandController : MonoBehaviour
       }
     //        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
     //        Debug.Log(hit.transform.gameObject);
-    materialRenderer = obj.transform.GetComponent<Renderer>();
+    if (obj.transform.GetComponent<Renderer>() != null)
+      {
+        materialRenderer = obj.transform.GetComponent<Renderer>();
+      } else if (obj.transform.GetComponentInChildren<Renderer>() != null)
+      {
+        materialRenderer = obj.transform.GetComponentInChildren<Renderer>();
+      }
+
     if (materialRenderer == null)
       {
         disableOutline(lastTarget);
