@@ -6,6 +6,8 @@ using UnityEngine.Analytics;
 
 public class HandController : MonoBehaviour
 {
+  static public System.Action prelevement;
+
   public Material artere;
   public Material artere_silhouette;
   public Material organe;
@@ -212,7 +214,6 @@ public class HandController : MonoBehaviour
         //  dragObj.GetComponent<Rigidbody>().useGravity = false;
         dragObj.GetComponent<Rigidbody>().isKinematic = false;
         CardManager.Instance.CheckOrgane(dragObj.name);
-        
       }
   }
 
