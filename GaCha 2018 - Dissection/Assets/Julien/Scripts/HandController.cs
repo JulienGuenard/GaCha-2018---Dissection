@@ -6,6 +6,8 @@ using UnityEngine.Analytics;
 
 public class HandController : MonoBehaviour
 {
+  static public System.Action prelevement;
+
   public Material artere;
   public Material artere_silhouette;
   public Material organe;
@@ -36,9 +38,7 @@ public class HandController : MonoBehaviour
 
   Transform offsetRay;
 
-    public static System.Action prelevement;
-
-    public static HandController Instance;
+  public static HandController Instance;
 
   void Awake()
   {
@@ -57,9 +57,9 @@ public class HandController : MonoBehaviour
 
   void FixedUpdate()
   {
-        // transform.position = handPos.position;
-        // MoveToPos();
-        RotateHand();
+    // transform.position = handPos.position;
+    // MoveToPos();
+    RotateHand();
 
 
     Debug.DrawRay(offsetRay.position, -offsetRay.up, Color.red, 0.01f);
@@ -84,15 +84,10 @@ public class HandController : MonoBehaviour
         DeselectArtere(selectedObj);
 
       }
-        if (dragObj != null && Input.GetKeyDown(KeyCode.Mouse0) && dragObj.name == "Scalpel")
-        {
-            CutSkin();
-            return;
-        }
 
-        if (selectedObj != null)
+    if (selectedObj != null)
       {
-            if (selectedObj.tag != "Artere" && dragObj != null && Input.GetKeyDown(KeyCode.Mouse0) && dragObj.name == "Scalpel")
+        if (selectedObj.tag != "Artere" && dragObj != null && Input.GetKeyDown(KeyCode.Mouse0) && dragObj.name == "Scalpel")
           {
             EventTaunt.taunt();
             return;
@@ -110,13 +105,13 @@ public class HandController : MonoBehaviour
             return;
           }
 
-            if (selectedObj.tag == "Os" && dragObj != null && Input.GetKeyDown(KeyCode.Mouse0) && dragObj.name == "Scie" && selectedObj.GetComponent<Rigidbody>().useGravity == false)
-            {
-                CutOs();
-                return;
-            }
+        if (selectedObj.tag == "Os" && dragObj != null && Input.GetKeyDown(KeyCode.Mouse0) && dragObj.name == "Scie" && selectedObj.GetComponent<Rigidbody>().useGravity == false)
+          {
+            CutOs();
+            return;
+          }
 
-            if (selectedObj != null && dragObj == null && Input.GetKeyDown(KeyCode.Mouse0))
+        if (selectedObj != null && dragObj == null && Input.GetKeyDown(KeyCode.Mouse0))
           {
             Drag();
             return;
@@ -126,7 +121,8 @@ public class HandController : MonoBehaviour
     if (dragObj != null)
       {
         if (Input.GetKeyDown(KeyCode.Mouse1))
-          { 
+          {
+            Debug.Log(true);
             Drop();
             return;
           }
@@ -135,29 +131,6 @@ public class HandController : MonoBehaviour
         return;
       }
   }
-  /*
-  void OnTriggerEnter(Collider col)
-  {
-    if (col.tag == "Artere" || col.tag == "Os" || col.tag == "Organe" || col.tag == "Outil")
-      {
-        if (selectedObj != null)
-          {
-            DeselectdArtere(selectedObj);
-          }
-        SelectArtere(col.gameObject);
-      }
-  }
-
-  void OnTriggerExit(Collider col)
-  {
-    if (col.tag == "Artere" || col.tag == "Os" || col.tag == "Organe" || col.tag == "Outil")
-      {
-        if (selectedObj != null && col.gameObject.name == selectedObj.name)
-          {
-            DeselectdArtere(col.gameObject);
-          }
-      }
-  }*/
 
   void SelectArtere(GameObject obj)
   {
@@ -191,30 +164,17 @@ public class HandController : MonoBehaviour
     selectedObj = null;
   }
 
-    void CutSkin()
-    {
-        RaycastHit hit;
+  void CutArtere()
+  {
+    selectedObj.GetComponent<Rigidbody>().useGravity = true;
+    selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+    if (selectedObj.GetComponentInParent<OrganeData>() != null)
+      selectedObj.GetComponentInParent<OrganeData>().listArtere.Remove(selectedObj);
 
-        if (Physics.Raycast(dragObj.transform.position + dragObj.transform.right * 0.007f, dragObj.transform.right, out hit))
-        {
-            if (hit.transform.tag == "Skin")
-            {
-                hit.transform.gameObject.SetActive(false);
-            }
-        }
-    }
+    selectedObj = null;
+  }
 
-    void CutArtere()
-    {
-        selectedObj.GetComponent<Rigidbody>().useGravity = true;
-        selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
-        if (selectedObj.GetComponentInParent<OrganeData>() != null)
-            selectedObj.GetComponentInParent<OrganeData>().listArtere.Remove(selectedObj);
-
-        selectedObj = null;
-    }
-
-    void CutOs()
+  void CutOs()
   {
     selectedObj.GetComponent<Rigidbody>().useGravity = true;
     selectedObj.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
@@ -253,9 +213,7 @@ public class HandController : MonoBehaviour
         dragObj = selectedObj;
         //  dragObj.GetComponent<Rigidbody>().useGravity = false;
         dragObj.GetComponent<Rigidbody>().isKinematic = false;
-            if(prelevement != null)
-            prelevement();
-        
+        CardManager.Instance.CheckOrgane(dragObj.name);
       }
   }
 
@@ -353,7 +311,7 @@ public class HandController : MonoBehaviour
       {
         return;
       }
-
+      
     materialRenderer.materials = mats;
     materialRenderer = null;
 
