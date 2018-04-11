@@ -38,16 +38,16 @@ public class HandController : MonoBehaviour
 
   Transform offsetRay;
 
-    public List<AudioClip> organeSfxList = new List<AudioClip>();
+  public List<AudioClip> organeSfxList = new List<AudioClip>();
 
 
-    void RandomOrganeArracheSound() // Si le joueur fait un perfect depuis au moins 2 Minutes, l'intimide
-    {
-        GetComponent<AudioSource>().clip = organeSfxList[Random.Range(0, 4)];
-        GetComponent<AudioSource>().Play();
-    }
+  void RandomOrganeArracheSound() // Si le joueur fait un perfect depuis au moins 2 Minutes, l'intimide
+  {
+    // GetComponent<AudioSource>().clip = organeSfxList[Random.Range(0, 4)];
+    //   GetComponent<AudioSource>().Play();
+  }
 
-    public static HandController Instance;
+  public static HandController Instance;
 
   void Awake()
   {
@@ -215,6 +215,7 @@ public class HandController : MonoBehaviour
   {
     if (selectedObj.GetComponent<Rigidbody>() == null)
       return;
+      
     if (selectedObj.GetComponent<Rigidbody>().useGravity == true)
       {
         selectedObj.transform.parent = transform; 
@@ -222,13 +223,13 @@ public class HandController : MonoBehaviour
         dragObj = selectedObj;
         //  dragObj.GetComponent<Rigidbody>().useGravity = false;
         dragObj.GetComponent<Rigidbody>().isKinematic = false;
-//        CardManager.Instance.CheckOrgane(dragObj.name);
-            if (dragObj.tag == "Organe")
-            {
-                RandomOrganeArracheSound();
-            }
-        }
-    }
+        CardManager.Instance.CheckOrgane(dragObj.name);
+        if (dragObj.tag == "Organe")
+          {
+            RandomOrganeArracheSound();
+          }
+      }
+  }
 
   void DragUpdate()
   {

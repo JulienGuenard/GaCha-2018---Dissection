@@ -337,19 +337,16 @@ public class CardManager : MonoBehaviour
 
   public void CheckOrgane(string nameOrgane)
   {
-    foreach (CartesScriptableObject obj in ScriptableCardList)
+    for (int i = 0; i < 4; i++)
       {
-        foreach (GameObject obj2 in listCard)
+        Debug.Log(nameOrgane + " " + listSelectedCard[i].nameOrgane);
+
+        if (listSelectedCard[i].nameOrgane == nameOrgane)
           {
-            if (obj.name == nameOrgane)
-              {
-                ScoreManager.Instance.MarquerPoints(obj.score);
-                listSelectedCard.Remove(obj);
-                
-              }
+            ScoreManager.Instance.MarquerPoints(listSelectedCard[i].score);
+            listSelectedCard.Remove(listSelectedCard[i]);
+            ScoreManager.Instance.CardFeedbackON(Color.green, i);
           }
       }
   }
-
-
 }

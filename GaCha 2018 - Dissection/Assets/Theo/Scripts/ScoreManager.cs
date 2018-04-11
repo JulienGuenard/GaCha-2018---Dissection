@@ -13,8 +13,6 @@ public class ScoreManager : MonoBehaviour
 
   public static string maladie = "Test";
 
-  public static GameObject feedbackScore;
-
   public Color color;
   public int number;
 
@@ -22,9 +20,11 @@ public class ScoreManager : MonoBehaviour
 
   public static ScoreManager Instance;
 
+  public GameObject feedbackScore;
+
   void Awake()
   {
-    feedbackScore = GameObject.Find("ScoreFeedback");
+    Instance = this;
   }
 
   public static void validerReponse()
@@ -83,9 +83,7 @@ public class ScoreManager : MonoBehaviour
 
   public void MarquerPoints(int score)
   {
-    number = score;
-    color = Color.green;
-    StartCoroutine("feedbackON");
+    StartCoroutine(feedbackON(score, Color.green));
     switch (NameManager.cptTours)
       {
       case 1: 
@@ -108,9 +106,7 @@ public class ScoreManager : MonoBehaviour
 
   public void PerdrePoints(int score)
   {
-    number = score;
-    color = Color.red;
-    StartCoroutine("feedbackON");
+    StartCoroutine(feedbackON(score, Color.red));
 
     switch (NameManager.cptTours)
       {
@@ -133,13 +129,19 @@ public class ScoreManager : MonoBehaviour
   }
 
   public IEnumerator feedbackON(int number, Color color)
-  {
+  {    
     feedbackScore.GetComponent<TextMesh>().text = "+" + number;
     feedbackScore.GetComponent<TextMesh>().color = color;
 
     feedbackScore.SetActive(true);
     yield return new WaitForSeconds(1f);
     feedbackScore.SetActive(false);
+  }
+
+  public void CardFeedbackON(Color color, int id)
+  {    
+    Debug.Log(id);
+    GameManager.Instance.listCardFeedback[id].color = color;
   }
 }
 
