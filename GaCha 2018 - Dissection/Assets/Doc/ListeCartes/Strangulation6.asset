@@ -15,3 +15,4 @@ MonoBehaviour:
   description: "Retirer les glandes surr\xE9nales."
   score: 8
   imageCard: {fileID: 21300000, guid: 38fd9c7716a48ff4aab2f06cbb83be6e, type: 3}
+  tailleText: 12

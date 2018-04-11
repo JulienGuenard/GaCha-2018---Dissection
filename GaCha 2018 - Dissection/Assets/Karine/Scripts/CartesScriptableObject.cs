@@ -9,5 +9,6 @@ public class CartesScriptableObject : ScriptableObject {
     public string description;
     public int score;
     public Sprite imageCard;
+    public int tailleText;
 
 }

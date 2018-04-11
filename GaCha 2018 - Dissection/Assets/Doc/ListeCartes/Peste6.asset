@@ -15,3 +15,4 @@ MonoBehaviour:
   description: "Retirer la veine subclavi\xE8re."
   score: 10
   imageCard: {fileID: 21300000, guid: 38fd9c7716a48ff4aab2f06cbb83be6e, type: 3}
+  tailleText: 12
