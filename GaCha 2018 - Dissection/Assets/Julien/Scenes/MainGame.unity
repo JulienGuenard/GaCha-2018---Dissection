@@ -630,6 +630,64 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &94717614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 94717615}
+  - component: {fileID: 94717616}
+  - component: {fileID: 94717617}
+  m_Layer: 0
+  m_Name: Poumon_1
+  m_TagString: Organe
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &94717615
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94717614}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.0393, y: -0.031420574, z: -0.0362}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 605792437}
+  m_Father: {fileID: 289795920}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &94717616
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94717614}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.05, y: 0.02, z: 0.06100347}
+  m_Center: {x: 0.02, y: 0.07, z: 0.03}
+--- !u!54 &94717617
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 94717614}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &95939455
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,6 +1012,34 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &120065505
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 120065506}
+  m_Layer: 0
+  m_Name: offsetRay
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &120065506
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 120065505}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.017, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1704644571}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &125728349
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,7 +1576,7 @@ GameObject:
   - component: {fileID: 172241343}
   - component: {fileID: 172241342}
   - component: {fileID: 172241344}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: BodyMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1756,7 +1842,7 @@ GameObject:
   - component: {fileID: 193826505}
   m_Layer: 0
   m_Name: Cote_TopSecondary_R
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2625,8 +2711,8 @@ Transform:
   - {fileID: 481121326}
   - {fileID: 1174156333}
   - {fileID: 250366491}
-  - {fileID: 605792437}
-  - {fileID: 688783567}
+  - {fileID: 1354164421}
+  - {fileID: 94717615}
   - {fileID: 87678032}
   - {fileID: 109415191}
   - {fileID: 859293167}
@@ -3385,7 +3471,7 @@ GameObject:
   - component: {fileID: 413453088}
   m_Layer: 0
   m_Name: Cote_07_L
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3889,7 +3975,7 @@ GameObject:
   - component: {fileID: 481121330}
   m_Layer: 0
   m_Name: Intestin_Grele
-  m_TagString: Untagged
+  m_TagString: Organe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4214,7 +4300,7 @@ GameObject:
   - component: {fileID: 530231867}
   m_Layer: 0
   m_Name: Cote_02_L
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5154,10 +5240,8 @@ GameObject:
   - component: {fileID: 605792437}
   - component: {fileID: 605792439}
   - component: {fileID: 605792438}
-  - component: {fileID: 605792440}
-  - component: {fileID: 605792441}
   m_Layer: 0
-  m_Name: Poumon_1
+  m_Name: Poumon_1renderer
   m_TagString: Organe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5169,12 +5253,12 @@ Transform:
   m_PrefabParentObject: {fileID: 400254, guid: a4ecb39129f63574c8d54013c8615110, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 605792436}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.881784e-18, y: -0.06009474, z: -8.881784e-18}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: 0.0393, y: -0.028674167, z: -0.0362}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 289795920}
-  m_RootOrder: 9
+  m_Father: {fileID: 94717615}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &605792438
 MeshRenderer:
@@ -5219,35 +5303,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 605792436}
   m_Mesh: {fileID: 4300036, guid: a4ecb39129f63574c8d54013c8615110, type: 3}
---- !u!64 &605792440
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 605792436}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300036, guid: a4ecb39129f63574c8d54013c8615110, type: 3}
---- !u!54 &605792441
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 605792436}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &606289305
 GameObject:
   m_ObjectHideFlags: 0
@@ -5352,7 +5407,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5564,10 +5619,8 @@ GameObject:
   - component: {fileID: 688783567}
   - component: {fileID: 688783569}
   - component: {fileID: 688783568}
-  - component: {fileID: 688783570}
-  - component: {fileID: 688783571}
   m_Layer: 0
-  m_Name: Poumon_2
+  m_Name: Poumon_2renderer
   m_TagString: Organe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5579,12 +5632,12 @@ Transform:
   m_PrefabParentObject: {fileID: 400256, guid: a4ecb39129f63574c8d54013c8615110, type: 3}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 688783566}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.881784e-18, y: -0.06009474, z: -8.881784e-18}
+  m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
+  m_LocalPosition: {x: -0.016, y: -0.09609474, z: -0.058}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 289795920}
-  m_RootOrder: 10
+  m_Father: {fileID: 1354164421}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!23 &688783568
 MeshRenderer:
@@ -5629,35 +5682,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 688783566}
   m_Mesh: {fileID: 4300038, guid: a4ecb39129f63574c8d54013c8615110, type: 3}
---- !u!64 &688783570
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 688783566}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300038, guid: a4ecb39129f63574c8d54013c8615110, type: 3}
---- !u!54 &688783571
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 688783566}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!4 &708437365 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 147eaaadc3a174f41bfc053907685f02, type: 3}
@@ -5704,7 +5728,7 @@ GameObject:
   - component: {fileID: 747287044}
   m_Layer: 0
   m_Name: Cote_01_R
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6203,7 +6227,7 @@ GameObject:
   - component: {fileID: 807432314}
   m_Layer: 0
   m_Name: Cote_03_R
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6349,7 +6373,7 @@ GameObject:
   - component: {fileID: 813064048}
   m_Layer: 0
   m_Name: Cote_TOP_R
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7442,7 +7466,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -7605,7 +7629,7 @@ GameObject:
   - component: {fileID: 982721385}
   m_Layer: 0
   m_Name: Cote_08_R
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7678,7 +7702,7 @@ GameObject:
   - component: {fileID: 990283870}
   m_Layer: 0
   m_Name: Cote_04_R
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7751,7 +7775,7 @@ GameObject:
   - component: {fileID: 990862200}
   m_Layer: 0
   m_Name: Cote_06_R
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8022,7 +8046,7 @@ GameObject:
   - component: {fileID: 1009747686}
   m_Layer: 0
   m_Name: Cote_08_L
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8488,7 +8512,7 @@ GameObject:
   - component: {fileID: 1042297634}
   m_Layer: 0
   m_Name: Cote_07_R
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9142,7 +9166,7 @@ GameObject:
   - component: {fileID: 1146189630}
   m_Layer: 0
   m_Name: Cote_05_R
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9804,7 +9828,7 @@ GameObject:
   - component: {fileID: 1251168571}
   m_Layer: 0
   m_Name: Sternum_01
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10597,6 +10621,64 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1345412604}
   m_Mesh: {fileID: 4300068, guid: a4ecb39129f63574c8d54013c8615110, type: 3}
+--- !u!1 &1354164420
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1354164421}
+  - component: {fileID: 1354164422}
+  - component: {fileID: 1354164423}
+  m_Layer: 0
+  m_Name: Poumon_2
+  m_TagString: Organe
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1354164421
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1354164420}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: -0.016, y: 0.036, z: -0.058}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 688783567}
+  m_Father: {fileID: 289795920}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1354164422
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1354164420}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.05, y: 0.02, z: 0.06}
+  m_Center: {x: 0.01, y: 0, z: 0}
+--- !u!54 &1354164423
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1354164420}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1363388945
 GameObject:
   m_ObjectHideFlags: 0
@@ -10744,7 +10826,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1393977229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10841,7 +10923,7 @@ GameObject:
   - component: {fileID: 1394069617}
   m_Layer: 0
   m_Name: Manubrium
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11188,7 +11270,7 @@ GameObject:
   - component: {fileID: 1469088225}
   m_Layer: 0
   m_Name: Cote_03_L
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11261,7 +11343,7 @@ GameObject:
   - component: {fileID: 1482405659}
   m_Layer: 0
   m_Name: Cote_02_R
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11891,7 +11973,7 @@ GameObject:
   - component: {fileID: 1569678761}
   m_Layer: 0
   m_Name: Cote_TOP_L
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12236,7 +12318,7 @@ GameObject:
   - component: {fileID: 1609623118}
   m_Layer: 0
   m_Name: Sternum_Bottom
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12395,7 +12477,7 @@ GameObject:
   - component: {fileID: 1622982875}
   m_Layer: 0
   m_Name: Cote_TopSecondary_L
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12468,7 +12550,7 @@ GameObject:
   - component: {fileID: 1643205996}
   m_Layer: 0
   m_Name: Sternum_02
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12809,7 +12891,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
       propertyPath: m_LocalScale.x
@@ -12866,6 +12948,98 @@ Prefab:
     - target: {fileID: 400004, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
       propertyPath: m_LocalPosition.y
       value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100038, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100008, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100022, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100012, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100024, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100042, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100032, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100018, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100036, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100040, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100014, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100034, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100028, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100006, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100030, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100020, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100044, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100010, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f655ff215d3d5af44829bfe82db1ce51, type: 3}
@@ -13303,7 +13477,7 @@ GameObject:
   - component: {fileID: 1695158537}
   m_Layer: 0
   m_Name: Intestin_2
-  m_TagString: Untagged
+  m_TagString: Organe
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13568,10 +13742,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1704644570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.249, y: 0.324, z: -0.462}
+  m_LocalPosition: {x: 0.25, y: 0.47, z: -0.48}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 22318304}
+  - {fileID: 120065506}
   - {fileID: 2040944682}
   m_Father: {fileID: 0}
   m_RootOrder: 12
@@ -14153,6 +14328,11 @@ Prefab:
     - target: {fileID: 1663354889435468, guid: 66133edeaa0fa3d4aa7a85d7f7556a15, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114627382282947080, guid: 66133edeaa0fa3d4aa7a85d7f7556a15,
+        type: 2}
+      propertyPath: CardScene
+      value: CardMenu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 66133edeaa0fa3d4aa7a85d7f7556a15, type: 2}
@@ -16277,7 +16457,7 @@ GameObject:
   - component: {fileID: 2056497301}
   m_Layer: 0
   m_Name: Cote_05_L
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16530,7 +16710,7 @@ GameObject:
   - component: {fileID: 2077745751}
   m_Layer: 0
   m_Name: Cote_06_L
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16822,7 +17002,7 @@ GameObject:
   - component: {fileID: 2135380023}
   m_Layer: 0
   m_Name: Cote_01_L
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16895,7 +17075,7 @@ GameObject:
   - component: {fileID: 2139557925}
   m_Layer: 0
   m_Name: Cote_04_L
-  m_TagString: Untagged
+  m_TagString: Os
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
