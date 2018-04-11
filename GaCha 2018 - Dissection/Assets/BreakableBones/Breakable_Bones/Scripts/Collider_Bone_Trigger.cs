@@ -9,8 +9,7 @@ public class Collider_Bone_Trigger : MonoBehaviour {
 
 	void OnTriggerEnter(Collider collision) {
 		if (collision.tag == "Outil"){
-			if (collision.GetComponent<Rigidbody>().velocity.magnitude > 2){
-				Debug.Log("Break!");
+			if (collision.GetComponent<Rigidbody>().velocity.magnitude > 0){
 
 				if (GetComponentInParent<Bone_Destroyed>()){
 					this.GetComponentInParent<Bone_Destroyed>().CheckFallingBones(Order);
