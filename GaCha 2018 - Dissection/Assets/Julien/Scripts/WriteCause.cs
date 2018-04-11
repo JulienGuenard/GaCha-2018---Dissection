@@ -24,7 +24,7 @@ public class WriteCause : MonoBehaviour
       Debug.Log("a");
   }
 
-  void StringUpdate()
+  void CanWrite()
   {
     charName = nameField.text;
      
