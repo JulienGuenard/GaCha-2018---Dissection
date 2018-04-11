@@ -34,6 +34,7 @@ public class NameManager : MonoBehaviour {
 			break;
 		}
 		Buttons.CardsMenu ();
+		Debug.Log ("gg batar");
 	}
 
 	public void lancerAndre() {
