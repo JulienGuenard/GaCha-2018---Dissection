@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -1616,8 +1616,8 @@ GameObject:
   - component: {fileID: 165296934}
   - component: {fileID: 165296936}
   - component: {fileID: 165296935}
-  - component: {fileID: 165296937}
   - component: {fileID: 165296938}
+  - component: {fileID: 165296937}
   m_Layer: 0
   m_Name: Intestin_1
   m_TagString: Organe
@@ -1681,8 +1681,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 165296933}
   m_Mesh: {fileID: 4300020, guid: a4ecb39129f63574c8d54013c8615110, type: 3}
---- !u!64 &165296937
-MeshCollider:
+--- !u!65 &165296937
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -1690,11 +1690,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300020, guid: a4ecb39129f63574c8d54013c8615110, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.046055708, y: 0.048919, z: 0.008352593}
+  m_Center: {x: 0, y: 0.0000000018626449, z: -1.323489e-23}
 --- !u!54 &165296938
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1884,7 +1882,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300016, guid: a4ecb39129f63574c8d54013c8615110, type: 3}
@@ -1975,7 +1973,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &174378978
 Transform:
   m_ObjectHideFlags: 0
@@ -5383,7 +5381,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 1d24ada21d959894fb933d7ed60c8fa5, type: 3}
@@ -6344,7 +6342,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 688783566}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -0.016, y: -0.09609474, z: -0.058}
+  m_LocalPosition: {x: -0.016, y: -0.09609474, z: -0.061}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1354164421}
@@ -6487,7 +6485,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 709037111}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.331, y: -0.5, z: 0.963}
+  m_LocalPosition: {x: 1.331, y: -0.5, z: 1.006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8148,8 +8146,8 @@ GameObject:
   - component: {fileID: 909484919}
   - component: {fileID: 909484921}
   - component: {fileID: 909484920}
-  - component: {fileID: 909484922}
   - component: {fileID: 909484923}
+  - component: {fileID: 909484922}
   m_Layer: 0
   m_Name: Diaphragme
   m_TagString: Organe
@@ -8213,8 +8211,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 909484918}
   m_Mesh: {fileID: 4300034, guid: a4ecb39129f63574c8d54013c8615110, type: 3}
---- !u!64 &909484922
-MeshCollider:
+--- !u!136 &909484922
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -8222,11 +8220,10 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300034, guid: a4ecb39129f63574c8d54013c8615110, type: 3}
+  m_Radius: 0.011551354
+  m_Height: 0.018767318
+  m_Direction: 1
+  m_Center: {x: -0.0038839392, y: -0.00044601434, z: 0.0033800951}
 --- !u!54 &909484923
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -10096,7 +10093,7 @@ Light:
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 1
     m_Resolution: 3
     m_CustomResolution: -1
     m_Strength: 1
@@ -10110,7 +10107,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 4
+  m_Lightmapping: 2
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
@@ -14478,7 +14475,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1667594496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.331, y: -0.5, z: 0.96300006}
+  m_LocalPosition: {x: 0.331, y: -0.5, z: 1.006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14913,8 +14910,8 @@ GameObject:
   - component: {fileID: 1695158533}
   - component: {fileID: 1695158535}
   - component: {fileID: 1695158534}
-  - component: {fileID: 1695158536}
   - component: {fileID: 1695158537}
+  - component: {fileID: 1695158536}
   m_Layer: 0
   m_Name: Intestin_2
   m_TagString: Organe
@@ -14978,8 +14975,8 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1695158532}
   m_Mesh: {fileID: 4300022, guid: a4ecb39129f63574c8d54013c8615110, type: 3}
---- !u!64 &1695158536
-MeshCollider:
+--- !u!65 &1695158536
+BoxCollider:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -14987,11 +14984,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_SkinWidth: 0.01
-  m_Mesh: {fileID: 4300022, guid: a4ecb39129f63574c8d54013c8615110, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.046055704, y: 0.048919, z: 0.008352593}
+  m_Center: {x: 0.000000014901161, y: -0.0000000018626454, z: -1.323489e-23}
 --- !u!54 &1695158537
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -17884,7 +17879,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2025952188}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.669, y: -0.5, z: 0.96300006}
+  m_LocalPosition: {x: -0.669, y: -0.5, z: 1.006}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

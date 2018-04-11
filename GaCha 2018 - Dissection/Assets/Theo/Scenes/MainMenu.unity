@@ -1041,7 +1041,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 622125924}
-        m_MethodName: CustomizationMenuButton
+        m_MethodName: CustomizationMenuPublic
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
