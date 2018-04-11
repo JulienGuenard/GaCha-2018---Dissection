@@ -11,3 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Julien/Scenes/CardMenu.unity
     guid: 5367369fc57247d41936ab45fc7dfb6d
+  - enabled: 1
+    path: Assets/Theo/Scenes/Credits.unity
+    guid: 43f41718875405244bd73dc41c1591d8
+  - enabled: 1
+    path: Assets/Theo/Scenes/MainMenu.unity
+    guid: cbc6fbc0f34f6a44d9927cb729260796
+  - enabled: 1
+    path: Assets/Theo/Scenes/CustomizationMenu.unity
+    guid: b7bae2678e6c80d40a8ef2b214e3f661

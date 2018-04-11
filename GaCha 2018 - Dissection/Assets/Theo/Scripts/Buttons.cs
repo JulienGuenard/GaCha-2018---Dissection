@@ -26,10 +26,15 @@ public class Buttons : MonoBehaviour {
 	}
 
 	public void NamingMenu() {
-		SceneManager.LoadScene ("NamingMenu", LoadSceneMode.Single);
+		SceneManager.LoadScene ("MainGame", LoadSceneMode.Single);
 	}
 
-	public static void CustomizationMenu() {
+    public void CustomizationMenuPublic()
+    {
+        SceneManager.LoadScene("CustomizationMenu", LoadSceneMode.Single);
+    }
+
+	public void CustomizationMenuButton() {
 		SceneManager.LoadScene ("CustomizationMenu", LoadSceneMode.Single);
 	}
 
