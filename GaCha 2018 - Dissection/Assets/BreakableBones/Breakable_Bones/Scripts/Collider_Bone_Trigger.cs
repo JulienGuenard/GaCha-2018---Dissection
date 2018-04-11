@@ -2,36 +2,46 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Collider_Bone_Trigger : MonoBehaviour {
+public class Collider_Bone_Trigger : MonoBehaviour
+{
 
-	public int Order;
-	public bool IsDestroyed = false;
+  public int Order;
+  public bool IsDestroyed = false;
 
-	void OnTriggerEnter(Collider collision) {
-		if (collision.tag == "Outil"){
-			if (collision.GetComponent<Rigidbody>().velocity.magnitude > 0){
+  void OnTriggerEnter(Collider collision)
+  {
+    if (collision.tag == "Outil")
+      {
+        if (collision.GetComponent<Rigidbody>().velocity.magnitude > 0)
+          {
 
-				if (GetComponentInParent<Bone_Destroyed>()){
-					this.GetComponentInParent<Bone_Destroyed>().CheckFallingBones(Order);
-				}
-			}
-		}
-	}
+            if (GetComponentInParent<Bone_Destroyed>())
+              {
+                this.GetComponentInParent<Bone_Destroyed>().CheckFallingBones(Order);
+              }
+          }
+      }
+  }
 
 
-	private void Update() {
-		if (IsDestroyed == true){
-			MeshCollider[] MeshCOL_Array = GetComponents<MeshCollider>();
+  private void Update()
+  {
+    if (IsDestroyed == true)
+      {
+        MeshCollider[] MeshCOL_Array = GetComponents<MeshCollider>();
 
-			if(MeshCOL_Array[0].isTrigger == true){
-				MeshCOL_Array[0].enabled = false;
-			}
-			else {MeshCOL_Array[1].enabled = false;}
+        if (MeshCOL_Array[0].isTrigger == true)
+          {
+            MeshCOL_Array[0].enabled = false;
+          } else
+          {
+            MeshCOL_Array[1].enabled = false;
+          }
 
-			this.gameObject.transform.parent= GameObject.Find("DestroyedObjectConteneur").transform;
-			this.gameObject.AddComponent<Rigidbody>();
-			this.gameObject.GetComponent<Collider_Bone_Trigger>().enabled = false;
-		}
-	}
+        this.gameObject.transform.parent = GameObject.Find("DestroyedObjectConteneur").transform;
+        this.gameObject.AddComponent<Rigidbody>();
+        this.gameObject.GetComponent<Collider_Bone_Trigger>().enabled = false;
+      }
+  }
 
 }

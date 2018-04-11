@@ -20,7 +20,7 @@ public class HandController : MonoBehaviour
 
   public float speedRotation;
 
-  static public GameObject selectedObj;
+  public GameObject selectedObj;
   public GameObject dragObj;
   Material lastMat;
   GameObject hand;
@@ -31,6 +31,8 @@ public class HandController : MonoBehaviour
   public Mesh Hand1;
   public Mesh Hand2;
   public Mesh Hand3;
+
+  GameObject DroppedItem;
 
   public static HandController Instance;
 
@@ -45,6 +47,7 @@ public class HandController : MonoBehaviour
     hand = GameObject.Find("Hand");
 //    handPos = GameObject.Find("HandPos").transform;
     handDrag = GameObject.Find("HandDrag").transform;
+    DroppedItem = GameObject.Find("DroppedItem");
   }
 
   void FixedUpdate()
@@ -183,6 +186,7 @@ public class HandController : MonoBehaviour
       return;
     if (selectedObj.GetComponent<Rigidbody>().useGravity == true)
       {
+        selectedObj.transform.parent = transform; 
         skinMesh.sharedMesh = Hand3;
         dragObj = selectedObj;
         dragObj.GetComponent<Rigidbody>().useGravity = false;
@@ -197,6 +201,7 @@ public class HandController : MonoBehaviour
 
   public void Drop()
   {
+    dragObj.transform.parent = DroppedItem.transform; 
     skinMesh.sharedMesh = Hand1;
     dragObj.GetComponent<Rigidbody>().useGravity = true;
     dragObj = null;

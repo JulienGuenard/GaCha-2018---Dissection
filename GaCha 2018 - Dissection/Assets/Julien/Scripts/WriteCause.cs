@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class WriteCause : MonoBehaviour
 {
-  public InputField nameField;
+  public GameObject nameField;
 
   private string charName;
 
@@ -20,16 +21,11 @@ public class WriteCause : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    if (Input.GetKeyDown(KeyCode.Return))
-      Debug.Log("a");
+    /* if (Input.GetKeyDown(KeyCode.Return) && )
+      {
+        nameField.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+      }*/
+
   }
-
-  void CanWrite()
-  {
-    charName = nameField.text;
-     
-
-    //   Debug.
-  }
-
 }

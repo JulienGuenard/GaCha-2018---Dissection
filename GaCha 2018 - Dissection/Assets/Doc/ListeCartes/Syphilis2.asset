@@ -15,3 +15,4 @@ MonoBehaviour:
   description: Terminer la dissection 10 secondes avant le temps imparti.
   score: 3
   imageCard: {fileID: 21300000, guid: fc2cab4c612af7246bdd3b357f995e54, type: 3}
+  tailleText: 10
