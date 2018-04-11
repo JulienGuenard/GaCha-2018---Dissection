@@ -33,6 +33,14 @@ public class Buttons : MonoBehaviour {
 		SceneManager.LoadScene ("CustomizationMenu", LoadSceneMode.Single);
 	}
 
+	public static void TeamScore() {
+		SceneManager.LoadScene("TeamScore", LoadSceneMode.Single);
+	}
+
+	public static void FinalScore() {
+		SceneManager.LoadScene ("FinalScore", LoadSceneMode.Single);
+	}
+
 	public void Quit() {
 		Application.Quit();
 	}
