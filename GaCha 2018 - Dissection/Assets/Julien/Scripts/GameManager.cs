@@ -5,12 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    //EventPose
+    //EventHelp
+    //EventTaunt
+    //EventTremblement
+    //EventDeconcentrate
+    //HandController
+    //
 
-  public static GameManager Instance;
+    public static GameManager Instance;
+    public static System.Action<float> endRound;
 
-  public string CardScene;
+    public string CardScene;
+    public Timer timer;
 
-  void Awake()
+    void Awake()
   {
     if (Instance == null)
       {
@@ -24,8 +33,11 @@ public class GameManager : MonoBehaviour
 
   public void EndRound()
   {
-    Cursor.lockState = CursorLockMode.None;
+        if(endRound != null)
+        endRound(timer.maxTime - timer.actualTime);
+        Cursor.lockState = CursorLockMode.None;
     SceneManager.LoadScene(CardScene, LoadSceneMode.Single);
+        NameManager.cptTours++;
   }
 
   public void EndMatch()
