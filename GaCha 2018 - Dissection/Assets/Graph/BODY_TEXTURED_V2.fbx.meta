@@ -1,0 +1,944 @@
+fileFormatVersion: 2
+guid: f52522ee68627994985380a42d846428
+timeCreated: 1523443713
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Artere
+    100002: Artere_01
+    100004: ArtereBras_01
+    100006: ArtereBras_02
+    100008: ArtereVentre_01
+    100010: //RootNode
+    100012: BodyMesh
+    100014: cage_thoracique1
+    100016: Cage_Thoracique_Origin
+    100018: Clavicle
+    100020: Clavicle1
+    100022: Clavicle_01
+    100024: Clavicle_01 1
+    100026: Clavicle_02
+    100028: Clavicle_02 1
+    100030: Coeur
+    100032: Corps_Exterieur
+    100034: Cote_01_L
+    100036: Cote_01_R
+    100038: Cote_02_L
+    100040: Cote_02_R
+    100042: Cote_03_L
+    100044: Cote_03_R
+    100046: Cote_04_L
+    100048: Cote_04_R
+    100050: Cote_05_L
+    100052: Cote_05_R
+    100054: Cote_06_L
+    100056: Cote_06_R
+    100058: Cote_07_L
+    100060: Cote_07_R
+    100062: Cote_08_L
+    100064: Cote_08_R
+    100066: Cote_TOP_L
+    100068: Cote_TOP_R
+    100070: Cote_TopSecondary_L
+    100072: Cote_TopSecondary_R
+    100074: cotes
+    100076: Cou
+    100078: Cou_Droit
+    100080: Cou_Gauche
+    100082: Diaphragme
+    100084: Estomac
+    100086: Foie
+    100088: Intestin1
+    100090: Intestin_1
+    100092: Intestin_2
+    100094: Intestin_Grele
+    100096: Manubrium
+    100098: Omoplate01
+    100100: Omoplate01 1
+    100102: Omoplate02
+    100104: Omoplate02 1
+    100106: Omoplate03
+    100108: Omoplate03 1
+    100110: Omoplate_Droite
+    100112: Omoplate_Droite1
+    100114: OrganesInternes
+    100116: Oseo
+    100118: pancreas
+    100120: polySurface5
+    100122: poumon:poumon:Vert_Tho_01
+    100124: poumon:poumon:Vert_Tho_01 1
+    100126: poumon:poumon:Vert_Tho_01 10
+    100128: poumon:poumon:Vert_Tho_01 11
+    100130: poumon:poumon:Vert_Tho_01 12
+    100132: poumon:poumon:Vert_Tho_01 13
+    100134: poumon:poumon:Vert_Tho_01 14
+    100136: poumon:poumon:Vert_Tho_01 15
+    100138: poumon:poumon:Vert_Tho_01 16
+    100140: poumon:poumon:Vert_Tho_01 17
+    100142: poumon:poumon:Vert_Tho_01 18
+    100144: poumon:poumon:Vert_Tho_01 19
+    100146: poumon:poumon:Vert_Tho_01 2
+    100148: poumon:poumon:Vert_Tho_01 20
+    100150: poumon:poumon:Vert_Tho_01 21
+    100152: poumon:poumon:Vert_Tho_01 22
+    100154: poumon:poumon:Vert_Tho_01 23
+    100156: poumon:poumon:Vert_Tho_01 24
+    100158: poumon:poumon:Vert_Tho_01 25
+    100160: poumon:poumon:Vert_Tho_01 26
+    100162: poumon:poumon:Vert_Tho_01 3
+    100164: poumon:poumon:Vert_Tho_01 4
+    100166: poumon:poumon:Vert_Tho_01 5
+    100168: poumon:poumon:Vert_Tho_01 6
+    100170: poumon:poumon:Vert_Tho_01 7
+    100172: poumon:poumon:Vert_Tho_01 8
+    100174: poumon:poumon:Vert_Tho_01 9
+    100176: poumon:poumon:Vert_Tho_02
+    100178: poumon:poumon:Vert_Tho_02 1
+    100180: poumon:poumon:Vert_Tho_02 10
+    100182: poumon:poumon:Vert_Tho_02 11
+    100184: poumon:poumon:Vert_Tho_02 12
+    100186: poumon:poumon:Vert_Tho_02 13
+    100188: poumon:poumon:Vert_Tho_02 14
+    100190: poumon:poumon:Vert_Tho_02 15
+    100192: poumon:poumon:Vert_Tho_02 16
+    100194: poumon:poumon:Vert_Tho_02 17
+    100196: poumon:poumon:Vert_Tho_02 18
+    100198: poumon:poumon:Vert_Tho_02 19
+    100200: poumon:poumon:Vert_Tho_02 2
+    100202: poumon:poumon:Vert_Tho_02 20
+    100204: poumon:poumon:Vert_Tho_02 21
+    100206: poumon:poumon:Vert_Tho_02 22
+    100208: poumon:poumon:Vert_Tho_02 23
+    100210: poumon:poumon:Vert_Tho_02 24
+    100212: poumon:poumon:Vert_Tho_02 25
+    100214: poumon:poumon:Vert_Tho_02 26
+    100216: poumon:poumon:Vert_Tho_02 3
+    100218: poumon:poumon:Vert_Tho_02 4
+    100220: poumon:poumon:Vert_Tho_02 5
+    100222: poumon:poumon:Vert_Tho_02 6
+    100224: poumon:poumon:Vert_Tho_02 7
+    100226: poumon:poumon:Vert_Tho_02 8
+    100228: poumon:poumon:Vert_Tho_02 9
+    100230: poumon:poumon:Vert_Tho_03
+    100232: poumon:poumon:Vert_Tho_03 1
+    100234: poumon:poumon:Vert_Tho_03 10
+    100236: poumon:poumon:Vert_Tho_03 11
+    100238: poumon:poumon:Vert_Tho_03 12
+    100240: poumon:poumon:Vert_Tho_03 13
+    100242: poumon:poumon:Vert_Tho_03 14
+    100244: poumon:poumon:Vert_Tho_03 15
+    100246: poumon:poumon:Vert_Tho_03 16
+    100248: poumon:poumon:Vert_Tho_03 17
+    100250: poumon:poumon:Vert_Tho_03 18
+    100252: poumon:poumon:Vert_Tho_03 19
+    100254: poumon:poumon:Vert_Tho_03 2
+    100256: poumon:poumon:Vert_Tho_03 20
+    100258: poumon:poumon:Vert_Tho_03 21
+    100260: poumon:poumon:Vert_Tho_03 22
+    100262: poumon:poumon:Vert_Tho_03 23
+    100264: poumon:poumon:Vert_Tho_03 24
+    100266: poumon:poumon:Vert_Tho_03 25
+    100268: poumon:poumon:Vert_Tho_03 26
+    100270: poumon:poumon:Vert_Tho_03 3
+    100272: poumon:poumon:Vert_Tho_03 4
+    100274: poumon:poumon:Vert_Tho_03 5
+    100276: poumon:poumon:Vert_Tho_03 6
+    100278: poumon:poumon:Vert_Tho_03 7
+    100280: poumon:poumon:Vert_Tho_03 8
+    100282: poumon:poumon:Vert_Tho_03 9
+    100284: Poumon_1
+    100286: Poumon_2
+    100288: Rein_Droite
+    100290: Rein_Gauche
+    100292: Skin_Movable
+    100294: Sternum_01
+    100296: Sternum_02
+    100298: Sternum_Bottom
+    100300: Trachee1
+    100302: Tyroid
+    100304: Ventre
+    100306: Ventre_Droit
+    100308: Ventre_Gauche
+    100310: Vert_Tho_01
+    100312: Vert_Tho_02
+    100314: Vert_Tho_03
+    100316: Verterbre_Cervicale
+    100318: Verterbre_Cervicale1
+    100320: Verterbre_Cervicale2
+    100322: Verterbre_Cervicale3
+    100324: Verterbre_Cervicale4
+    100326: Verterbre_Cervicale5
+    100328: Verterbre_Cervicales
+    100330: Verterbre_Thoracique
+    100332: Verterbre_Thoracique1
+    100334: Verterbre_Thoracique10
+    100336: Verterbre_Thoracique11
+    100338: Verterbre_Thoracique12
+    100340: Verterbre_Thoracique13
+    100342: Verterbre_Thoracique14
+    100344: Verterbre_Thoracique15
+    100346: Verterbre_Thoracique16
+    100348: Verterbre_Thoracique17
+    100350: Verterbre_Thoracique18
+    100352: Verterbre_Thoracique19
+    100354: Verterbre_Thoracique2
+    100356: Verterbre_Thoracique20
+    100358: Verterbre_Thoracique21
+    100360: Verterbre_Thoracique22
+    100362: Verterbre_Thoracique23
+    100364: Verterbre_Thoracique24
+    100366: Verterbre_Thoracique25
+    100368: Verterbre_Thoracique26
+    100370: Verterbre_Thoracique27
+    100372: Verterbre_Thoracique3
+    100374: Verterbre_Thoracique4
+    100376: Verterbre_Thoracique5
+    100378: Verterbre_Thoracique6
+    100380: Verterbre_Thoracique7
+    100382: Verterbre_Thoracique8
+    100384: Verterbre_Thoracique9
+    100386: Verterbre_Thoracique_Main
+    100388: vesicule
+    400000: Artere
+    400002: Artere_01
+    400004: ArtereBras_01
+    400006: ArtereBras_02
+    400008: ArtereVentre_01
+    400010: //RootNode
+    400012: BodyMesh
+    400014: cage_thoracique1
+    400016: Cage_Thoracique_Origin
+    400018: Clavicle
+    400020: Clavicle1
+    400022: Clavicle_01
+    400024: Clavicle_01 1
+    400026: Clavicle_02
+    400028: Clavicle_02 1
+    400030: Coeur
+    400032: Corps_Exterieur
+    400034: Cote_01_L
+    400036: Cote_01_R
+    400038: Cote_02_L
+    400040: Cote_02_R
+    400042: Cote_03_L
+    400044: Cote_03_R
+    400046: Cote_04_L
+    400048: Cote_04_R
+    400050: Cote_05_L
+    400052: Cote_05_R
+    400054: Cote_06_L
+    400056: Cote_06_R
+    400058: Cote_07_L
+    400060: Cote_07_R
+    400062: Cote_08_L
+    400064: Cote_08_R
+    400066: Cote_TOP_L
+    400068: Cote_TOP_R
+    400070: Cote_TopSecondary_L
+    400072: Cote_TopSecondary_R
+    400074: cotes
+    400076: Cou
+    400078: Cou_Droit
+    400080: Cou_Gauche
+    400082: Diaphragme
+    400084: Estomac
+    400086: Foie
+    400088: Intestin1
+    400090: Intestin_1
+    400092: Intestin_2
+    400094: Intestin_Grele
+    400096: Manubrium
+    400098: Omoplate01
+    400100: Omoplate01 1
+    400102: Omoplate02
+    400104: Omoplate02 1
+    400106: Omoplate03
+    400108: Omoplate03 1
+    400110: Omoplate_Droite
+    400112: Omoplate_Droite1
+    400114: OrganesInternes
+    400116: Oseo
+    400118: pancreas
+    400120: polySurface5
+    400122: poumon:poumon:Vert_Tho_01
+    400124: poumon:poumon:Vert_Tho_01 1
+    400126: poumon:poumon:Vert_Tho_01 10
+    400128: poumon:poumon:Vert_Tho_01 11
+    400130: poumon:poumon:Vert_Tho_01 12
+    400132: poumon:poumon:Vert_Tho_01 13
+    400134: poumon:poumon:Vert_Tho_01 14
+    400136: poumon:poumon:Vert_Tho_01 15
+    400138: poumon:poumon:Vert_Tho_01 16
+    400140: poumon:poumon:Vert_Tho_01 17
+    400142: poumon:poumon:Vert_Tho_01 18
+    400144: poumon:poumon:Vert_Tho_01 19
+    400146: poumon:poumon:Vert_Tho_01 2
+    400148: poumon:poumon:Vert_Tho_01 20
+    400150: poumon:poumon:Vert_Tho_01 21
+    400152: poumon:poumon:Vert_Tho_01 22
+    400154: poumon:poumon:Vert_Tho_01 23
+    400156: poumon:poumon:Vert_Tho_01 24
+    400158: poumon:poumon:Vert_Tho_01 25
+    400160: poumon:poumon:Vert_Tho_01 26
+    400162: poumon:poumon:Vert_Tho_01 3
+    400164: poumon:poumon:Vert_Tho_01 4
+    400166: poumon:poumon:Vert_Tho_01 5
+    400168: poumon:poumon:Vert_Tho_01 6
+    400170: poumon:poumon:Vert_Tho_01 7
+    400172: poumon:poumon:Vert_Tho_01 8
+    400174: poumon:poumon:Vert_Tho_01 9
+    400176: poumon:poumon:Vert_Tho_02
+    400178: poumon:poumon:Vert_Tho_02 1
+    400180: poumon:poumon:Vert_Tho_02 10
+    400182: poumon:poumon:Vert_Tho_02 11
+    400184: poumon:poumon:Vert_Tho_02 12
+    400186: poumon:poumon:Vert_Tho_02 13
+    400188: poumon:poumon:Vert_Tho_02 14
+    400190: poumon:poumon:Vert_Tho_02 15
+    400192: poumon:poumon:Vert_Tho_02 16
+    400194: poumon:poumon:Vert_Tho_02 17
+    400196: poumon:poumon:Vert_Tho_02 18
+    400198: poumon:poumon:Vert_Tho_02 19
+    400200: poumon:poumon:Vert_Tho_02 2
+    400202: poumon:poumon:Vert_Tho_02 20
+    400204: poumon:poumon:Vert_Tho_02 21
+    400206: poumon:poumon:Vert_Tho_02 22
+    400208: poumon:poumon:Vert_Tho_02 23
+    400210: poumon:poumon:Vert_Tho_02 24
+    400212: poumon:poumon:Vert_Tho_02 25
+    400214: poumon:poumon:Vert_Tho_02 26
+    400216: poumon:poumon:Vert_Tho_02 3
+    400218: poumon:poumon:Vert_Tho_02 4
+    400220: poumon:poumon:Vert_Tho_02 5
+    400222: poumon:poumon:Vert_Tho_02 6
+    400224: poumon:poumon:Vert_Tho_02 7
+    400226: poumon:poumon:Vert_Tho_02 8
+    400228: poumon:poumon:Vert_Tho_02 9
+    400230: poumon:poumon:Vert_Tho_03
+    400232: poumon:poumon:Vert_Tho_03 1
+    400234: poumon:poumon:Vert_Tho_03 10
+    400236: poumon:poumon:Vert_Tho_03 11
+    400238: poumon:poumon:Vert_Tho_03 12
+    400240: poumon:poumon:Vert_Tho_03 13
+    400242: poumon:poumon:Vert_Tho_03 14
+    400244: poumon:poumon:Vert_Tho_03 15
+    400246: poumon:poumon:Vert_Tho_03 16
+    400248: poumon:poumon:Vert_Tho_03 17
+    400250: poumon:poumon:Vert_Tho_03 18
+    400252: poumon:poumon:Vert_Tho_03 19
+    400254: poumon:poumon:Vert_Tho_03 2
+    400256: poumon:poumon:Vert_Tho_03 20
+    400258: poumon:poumon:Vert_Tho_03 21
+    400260: poumon:poumon:Vert_Tho_03 22
+    400262: poumon:poumon:Vert_Tho_03 23
+    400264: poumon:poumon:Vert_Tho_03 24
+    400266: poumon:poumon:Vert_Tho_03 25
+    400268: poumon:poumon:Vert_Tho_03 26
+    400270: poumon:poumon:Vert_Tho_03 3
+    400272: poumon:poumon:Vert_Tho_03 4
+    400274: poumon:poumon:Vert_Tho_03 5
+    400276: poumon:poumon:Vert_Tho_03 6
+    400278: poumon:poumon:Vert_Tho_03 7
+    400280: poumon:poumon:Vert_Tho_03 8
+    400282: poumon:poumon:Vert_Tho_03 9
+    400284: Poumon_1
+    400286: Poumon_2
+    400288: Rein_Droite
+    400290: Rein_Gauche
+    400292: Skin_Movable
+    400294: Sternum_01
+    400296: Sternum_02
+    400298: Sternum_Bottom
+    400300: Trachee1
+    400302: Tyroid
+    400304: Ventre
+    400306: Ventre_Droit
+    400308: Ventre_Gauche
+    400310: Vert_Tho_01
+    400312: Vert_Tho_02
+    400314: Vert_Tho_03
+    400316: Verterbre_Cervicale
+    400318: Verterbre_Cervicale1
+    400320: Verterbre_Cervicale2
+    400322: Verterbre_Cervicale3
+    400324: Verterbre_Cervicale4
+    400326: Verterbre_Cervicale5
+    400328: Verterbre_Cervicales
+    400330: Verterbre_Thoracique
+    400332: Verterbre_Thoracique1
+    400334: Verterbre_Thoracique10
+    400336: Verterbre_Thoracique11
+    400338: Verterbre_Thoracique12
+    400340: Verterbre_Thoracique13
+    400342: Verterbre_Thoracique14
+    400344: Verterbre_Thoracique15
+    400346: Verterbre_Thoracique16
+    400348: Verterbre_Thoracique17
+    400350: Verterbre_Thoracique18
+    400352: Verterbre_Thoracique19
+    400354: Verterbre_Thoracique2
+    400356: Verterbre_Thoracique20
+    400358: Verterbre_Thoracique21
+    400360: Verterbre_Thoracique22
+    400362: Verterbre_Thoracique23
+    400364: Verterbre_Thoracique24
+    400366: Verterbre_Thoracique25
+    400368: Verterbre_Thoracique26
+    400370: Verterbre_Thoracique27
+    400372: Verterbre_Thoracique3
+    400374: Verterbre_Thoracique4
+    400376: Verterbre_Thoracique5
+    400378: Verterbre_Thoracique6
+    400380: Verterbre_Thoracique7
+    400382: Verterbre_Thoracique8
+    400384: Verterbre_Thoracique9
+    400386: Verterbre_Thoracique_Main
+    400388: vesicule
+    2100000: ArtereCoeur
+    2100002: BODYSHELL03_Extract_Superior
+    2100004: BODYSHELL03_Corps_Interior
+    2100006: BODYSHELL03_Corps_Exterior
+    2100008: PoumonsReinsInstesGrele
+    2100010: intestins
+    2100012: Tyroide
+    2100014: Trachee
+    2100016: pancreas_Color
+    2100018: FoieEosoVesicule
+    2100020: os
+    2100022: OSInterior_Material
+    2100024: OS_Material1
+    2100026: OSInterior_Material1
+    2300000: Artere_01
+    2300002: ArtereBras_01
+    2300004: ArtereBras_02
+    2300006: ArtereVentre_01
+    2300008: BodyMesh
+    2300010: Cage_Thoracique_Origin
+    2300012: Clavicle_01
+    2300014: Clavicle_01 1
+    2300016: Clavicle_02
+    2300018: Clavicle_02 1
+    2300020: Coeur
+    2300022: Cote_01_L
+    2300024: Cote_01_R
+    2300026: Cote_02_L
+    2300028: Cote_02_R
+    2300030: Cote_03_L
+    2300032: Cote_03_R
+    2300034: Cote_04_L
+    2300036: Cote_04_R
+    2300038: Cote_05_L
+    2300040: Cote_05_R
+    2300042: Cote_06_L
+    2300044: Cote_06_R
+    2300046: Cote_07_L
+    2300048: Cote_07_R
+    2300050: Cote_08_L
+    2300052: Cote_08_R
+    2300054: Cote_TOP_L
+    2300056: Cote_TOP_R
+    2300058: Cote_TopSecondary_L
+    2300060: Cote_TopSecondary_R
+    2300062: Cou_Droit
+    2300064: Cou_Gauche
+    2300066: Diaphragme
+    2300068: Estomac
+    2300070: Foie
+    2300072: Intestin_1
+    2300074: Intestin_2
+    2300076: Intestin_Grele
+    2300078: Manubrium
+    2300080: Omoplate01
+    2300082: Omoplate01 1
+    2300084: Omoplate02
+    2300086: Omoplate02 1
+    2300088: Omoplate03
+    2300090: Omoplate03 1
+    2300092: Oseo
+    2300094: pancreas
+    2300096: polySurface5
+    2300098: poumon:poumon:Vert_Tho_01
+    2300100: poumon:poumon:Vert_Tho_01 1
+    2300102: poumon:poumon:Vert_Tho_01 10
+    2300104: poumon:poumon:Vert_Tho_01 11
+    2300106: poumon:poumon:Vert_Tho_01 12
+    2300108: poumon:poumon:Vert_Tho_01 13
+    2300110: poumon:poumon:Vert_Tho_01 14
+    2300112: poumon:poumon:Vert_Tho_01 15
+    2300114: poumon:poumon:Vert_Tho_01 16
+    2300116: poumon:poumon:Vert_Tho_01 17
+    2300118: poumon:poumon:Vert_Tho_01 18
+    2300120: poumon:poumon:Vert_Tho_01 19
+    2300122: poumon:poumon:Vert_Tho_01 2
+    2300124: poumon:poumon:Vert_Tho_01 20
+    2300126: poumon:poumon:Vert_Tho_01 21
+    2300128: poumon:poumon:Vert_Tho_01 22
+    2300130: poumon:poumon:Vert_Tho_01 23
+    2300132: poumon:poumon:Vert_Tho_01 24
+    2300134: poumon:poumon:Vert_Tho_01 25
+    2300136: poumon:poumon:Vert_Tho_01 26
+    2300138: poumon:poumon:Vert_Tho_01 3
+    2300140: poumon:poumon:Vert_Tho_01 4
+    2300142: poumon:poumon:Vert_Tho_01 5
+    2300144: poumon:poumon:Vert_Tho_01 6
+    2300146: poumon:poumon:Vert_Tho_01 7
+    2300148: poumon:poumon:Vert_Tho_01 8
+    2300150: poumon:poumon:Vert_Tho_01 9
+    2300152: poumon:poumon:Vert_Tho_02
+    2300154: poumon:poumon:Vert_Tho_02 1
+    2300156: poumon:poumon:Vert_Tho_02 10
+    2300158: poumon:poumon:Vert_Tho_02 11
+    2300160: poumon:poumon:Vert_Tho_02 12
+    2300162: poumon:poumon:Vert_Tho_02 13
+    2300164: poumon:poumon:Vert_Tho_02 14
+    2300166: poumon:poumon:Vert_Tho_02 15
+    2300168: poumon:poumon:Vert_Tho_02 16
+    2300170: poumon:poumon:Vert_Tho_02 17
+    2300172: poumon:poumon:Vert_Tho_02 18
+    2300174: poumon:poumon:Vert_Tho_02 19
+    2300176: poumon:poumon:Vert_Tho_02 2
+    2300178: poumon:poumon:Vert_Tho_02 20
+    2300180: poumon:poumon:Vert_Tho_02 21
+    2300182: poumon:poumon:Vert_Tho_02 22
+    2300184: poumon:poumon:Vert_Tho_02 23
+    2300186: poumon:poumon:Vert_Tho_02 24
+    2300188: poumon:poumon:Vert_Tho_02 25
+    2300190: poumon:poumon:Vert_Tho_02 26
+    2300192: poumon:poumon:Vert_Tho_02 3
+    2300194: poumon:poumon:Vert_Tho_02 4
+    2300196: poumon:poumon:Vert_Tho_02 5
+    2300198: poumon:poumon:Vert_Tho_02 6
+    2300200: poumon:poumon:Vert_Tho_02 7
+    2300202: poumon:poumon:Vert_Tho_02 8
+    2300204: poumon:poumon:Vert_Tho_02 9
+    2300206: poumon:poumon:Vert_Tho_03
+    2300208: poumon:poumon:Vert_Tho_03 1
+    2300210: poumon:poumon:Vert_Tho_03 10
+    2300212: poumon:poumon:Vert_Tho_03 11
+    2300214: poumon:poumon:Vert_Tho_03 12
+    2300216: poumon:poumon:Vert_Tho_03 13
+    2300218: poumon:poumon:Vert_Tho_03 14
+    2300220: poumon:poumon:Vert_Tho_03 15
+    2300222: poumon:poumon:Vert_Tho_03 16
+    2300224: poumon:poumon:Vert_Tho_03 17
+    2300226: poumon:poumon:Vert_Tho_03 18
+    2300228: poumon:poumon:Vert_Tho_03 19
+    2300230: poumon:poumon:Vert_Tho_03 2
+    2300232: poumon:poumon:Vert_Tho_03 20
+    2300234: poumon:poumon:Vert_Tho_03 21
+    2300236: poumon:poumon:Vert_Tho_03 22
+    2300238: poumon:poumon:Vert_Tho_03 23
+    2300240: poumon:poumon:Vert_Tho_03 24
+    2300242: poumon:poumon:Vert_Tho_03 25
+    2300244: poumon:poumon:Vert_Tho_03 26
+    2300246: poumon:poumon:Vert_Tho_03 3
+    2300248: poumon:poumon:Vert_Tho_03 4
+    2300250: poumon:poumon:Vert_Tho_03 5
+    2300252: poumon:poumon:Vert_Tho_03 6
+    2300254: poumon:poumon:Vert_Tho_03 7
+    2300256: poumon:poumon:Vert_Tho_03 8
+    2300258: poumon:poumon:Vert_Tho_03 9
+    2300260: Poumon_1
+    2300262: Poumon_2
+    2300264: Rein_Droite
+    2300266: Rein_Gauche
+    2300268: Sternum_01
+    2300270: Sternum_02
+    2300272: Sternum_Bottom
+    2300274: Trachee1
+    2300276: Tyroid
+    2300278: Ventre_Droit
+    2300280: Ventre_Gauche
+    2300282: Vert_Tho_01
+    2300284: Vert_Tho_02
+    2300286: Vert_Tho_03
+    2300288: Verterbre_Cervicale
+    2300290: Verterbre_Cervicale1
+    2300292: Verterbre_Cervicale2
+    2300294: Verterbre_Cervicale3
+    2300296: Verterbre_Cervicale4
+    2300298: Verterbre_Cervicale5
+    2300300: vesicule
+    3300000: Artere_01
+    3300002: ArtereBras_01
+    3300004: ArtereBras_02
+    3300006: ArtereVentre_01
+    3300008: BodyMesh
+    3300010: Cage_Thoracique_Origin
+    3300012: Clavicle_01
+    3300014: Clavicle_01 1
+    3300016: Clavicle_02
+    3300018: Clavicle_02 1
+    3300020: Coeur
+    3300022: Cote_01_L
+    3300024: Cote_01_R
+    3300026: Cote_02_L
+    3300028: Cote_02_R
+    3300030: Cote_03_L
+    3300032: Cote_03_R
+    3300034: Cote_04_L
+    3300036: Cote_04_R
+    3300038: Cote_05_L
+    3300040: Cote_05_R
+    3300042: Cote_06_L
+    3300044: Cote_06_R
+    3300046: Cote_07_L
+    3300048: Cote_07_R
+    3300050: Cote_08_L
+    3300052: Cote_08_R
+    3300054: Cote_TOP_L
+    3300056: Cote_TOP_R
+    3300058: Cote_TopSecondary_L
+    3300060: Cote_TopSecondary_R
+    3300062: Cou_Droit
+    3300064: Cou_Gauche
+    3300066: Diaphragme
+    3300068: Estomac
+    3300070: Foie
+    3300072: Intestin_1
+    3300074: Intestin_2
+    3300076: Intestin_Grele
+    3300078: Manubrium
+    3300080: Omoplate01
+    3300082: Omoplate01 1
+    3300084: Omoplate02
+    3300086: Omoplate02 1
+    3300088: Omoplate03
+    3300090: Omoplate03 1
+    3300092: Oseo
+    3300094: pancreas
+    3300096: polySurface5
+    3300098: poumon:poumon:Vert_Tho_01
+    3300100: poumon:poumon:Vert_Tho_01 1
+    3300102: poumon:poumon:Vert_Tho_01 10
+    3300104: poumon:poumon:Vert_Tho_01 11
+    3300106: poumon:poumon:Vert_Tho_01 12
+    3300108: poumon:poumon:Vert_Tho_01 13
+    3300110: poumon:poumon:Vert_Tho_01 14
+    3300112: poumon:poumon:Vert_Tho_01 15
+    3300114: poumon:poumon:Vert_Tho_01 16
+    3300116: poumon:poumon:Vert_Tho_01 17
+    3300118: poumon:poumon:Vert_Tho_01 18
+    3300120: poumon:poumon:Vert_Tho_01 19
+    3300122: poumon:poumon:Vert_Tho_01 2
+    3300124: poumon:poumon:Vert_Tho_01 20
+    3300126: poumon:poumon:Vert_Tho_01 21
+    3300128: poumon:poumon:Vert_Tho_01 22
+    3300130: poumon:poumon:Vert_Tho_01 23
+    3300132: poumon:poumon:Vert_Tho_01 24
+    3300134: poumon:poumon:Vert_Tho_01 25
+    3300136: poumon:poumon:Vert_Tho_01 26
+    3300138: poumon:poumon:Vert_Tho_01 3
+    3300140: poumon:poumon:Vert_Tho_01 4
+    3300142: poumon:poumon:Vert_Tho_01 5
+    3300144: poumon:poumon:Vert_Tho_01 6
+    3300146: poumon:poumon:Vert_Tho_01 7
+    3300148: poumon:poumon:Vert_Tho_01 8
+    3300150: poumon:poumon:Vert_Tho_01 9
+    3300152: poumon:poumon:Vert_Tho_02
+    3300154: poumon:poumon:Vert_Tho_02 1
+    3300156: poumon:poumon:Vert_Tho_02 10
+    3300158: poumon:poumon:Vert_Tho_02 11
+    3300160: poumon:poumon:Vert_Tho_02 12
+    3300162: poumon:poumon:Vert_Tho_02 13
+    3300164: poumon:poumon:Vert_Tho_02 14
+    3300166: poumon:poumon:Vert_Tho_02 15
+    3300168: poumon:poumon:Vert_Tho_02 16
+    3300170: poumon:poumon:Vert_Tho_02 17
+    3300172: poumon:poumon:Vert_Tho_02 18
+    3300174: poumon:poumon:Vert_Tho_02 19
+    3300176: poumon:poumon:Vert_Tho_02 2
+    3300178: poumon:poumon:Vert_Tho_02 20
+    3300180: poumon:poumon:Vert_Tho_02 21
+    3300182: poumon:poumon:Vert_Tho_02 22
+    3300184: poumon:poumon:Vert_Tho_02 23
+    3300186: poumon:poumon:Vert_Tho_02 24
+    3300188: poumon:poumon:Vert_Tho_02 25
+    3300190: poumon:poumon:Vert_Tho_02 26
+    3300192: poumon:poumon:Vert_Tho_02 3
+    3300194: poumon:poumon:Vert_Tho_02 4
+    3300196: poumon:poumon:Vert_Tho_02 5
+    3300198: poumon:poumon:Vert_Tho_02 6
+    3300200: poumon:poumon:Vert_Tho_02 7
+    3300202: poumon:poumon:Vert_Tho_02 8
+    3300204: poumon:poumon:Vert_Tho_02 9
+    3300206: poumon:poumon:Vert_Tho_03
+    3300208: poumon:poumon:Vert_Tho_03 1
+    3300210: poumon:poumon:Vert_Tho_03 10
+    3300212: poumon:poumon:Vert_Tho_03 11
+    3300214: poumon:poumon:Vert_Tho_03 12
+    3300216: poumon:poumon:Vert_Tho_03 13
+    3300218: poumon:poumon:Vert_Tho_03 14
+    3300220: poumon:poumon:Vert_Tho_03 15
+    3300222: poumon:poumon:Vert_Tho_03 16
+    3300224: poumon:poumon:Vert_Tho_03 17
+    3300226: poumon:poumon:Vert_Tho_03 18
+    3300228: poumon:poumon:Vert_Tho_03 19
+    3300230: poumon:poumon:Vert_Tho_03 2
+    3300232: poumon:poumon:Vert_Tho_03 20
+    3300234: poumon:poumon:Vert_Tho_03 21
+    3300236: poumon:poumon:Vert_Tho_03 22
+    3300238: poumon:poumon:Vert_Tho_03 23
+    3300240: poumon:poumon:Vert_Tho_03 24
+    3300242: poumon:poumon:Vert_Tho_03 25
+    3300244: poumon:poumon:Vert_Tho_03 26
+    3300246: poumon:poumon:Vert_Tho_03 3
+    3300248: poumon:poumon:Vert_Tho_03 4
+    3300250: poumon:poumon:Vert_Tho_03 5
+    3300252: poumon:poumon:Vert_Tho_03 6
+    3300254: poumon:poumon:Vert_Tho_03 7
+    3300256: poumon:poumon:Vert_Tho_03 8
+    3300258: poumon:poumon:Vert_Tho_03 9
+    3300260: Poumon_1
+    3300262: Poumon_2
+    3300264: Rein_Droite
+    3300266: Rein_Gauche
+    3300268: Sternum_01
+    3300270: Sternum_02
+    3300272: Sternum_Bottom
+    3300274: Trachee1
+    3300276: Tyroid
+    3300278: Ventre_Droit
+    3300280: Ventre_Gauche
+    3300282: Vert_Tho_01
+    3300284: Vert_Tho_02
+    3300286: Vert_Tho_03
+    3300288: Verterbre_Cervicale
+    3300290: Verterbre_Cervicale1
+    3300292: Verterbre_Cervicale2
+    3300294: Verterbre_Cervicale3
+    3300296: Verterbre_Cervicale4
+    3300298: Verterbre_Cervicale5
+    3300300: vesicule
+    4300000: ArtereBras_02
+    4300002: ArtereBras_01
+    4300004: ArtereVentre_01
+    4300006: Artere_01
+    4300008: Cou_Droit
+    4300010: Cou_Gauche
+    4300012: Ventre_Droit
+    4300014: Ventre_Gauche
+    4300016: BodyMesh
+    4300018: Intestin_Grele
+    4300020: Intestin_1
+    4300022: Intestin_2
+    4300024: Tyroid
+    4300026: Trachee1
+    4300028: pancreas
+    4300030: vesicule
+    4300032: Oseo
+    4300034: Rein_Gauche
+    4300036: Rein_Droite
+    4300038: Diaphragme
+    4300040: Poumon_1
+    4300042: Poumon_2
+    4300044: Estomac
+    4300046: Coeur
+    4300048: Foie
+    4300050: Omoplate01
+    4300052: Omoplate02
+    4300054: Omoplate03
+    4300056: Omoplate01
+    4300058: Omoplate02
+    4300060: Omoplate03
+    4300062: Vert_Tho_01
+    4300064: Vert_Tho_02
+    4300066: Vert_Tho_03
+    4300068: poumon:poumon:Vert_Tho_01
+    4300070: poumon:poumon:Vert_Tho_02
+    4300072: poumon:poumon:Vert_Tho_03
+    4300074: poumon:poumon:Vert_Tho_01
+    4300076: poumon:poumon:Vert_Tho_02
+    4300078: poumon:poumon:Vert_Tho_03
+    4300080: poumon:poumon:Vert_Tho_01
+    4300082: poumon:poumon:Vert_Tho_02
+    4300084: poumon:poumon:Vert_Tho_03
+    4300086: poumon:poumon:Vert_Tho_01
+    4300088: poumon:poumon:Vert_Tho_02
+    4300090: poumon:poumon:Vert_Tho_03
+    4300092: poumon:poumon:Vert_Tho_01
+    4300094: poumon:poumon:Vert_Tho_02
+    4300096: poumon:poumon:Vert_Tho_03
+    4300098: poumon:poumon:Vert_Tho_01
+    4300100: poumon:poumon:Vert_Tho_02
+    4300102: poumon:poumon:Vert_Tho_03
+    4300104: poumon:poumon:Vert_Tho_01
+    4300106: poumon:poumon:Vert_Tho_02
+    4300108: poumon:poumon:Vert_Tho_03
+    4300110: poumon:poumon:Vert_Tho_01
+    4300112: poumon:poumon:Vert_Tho_02
+    4300114: poumon:poumon:Vert_Tho_03
+    4300116: poumon:poumon:Vert_Tho_01
+    4300118: poumon:poumon:Vert_Tho_02
+    4300120: poumon:poumon:Vert_Tho_03
+    4300122: poumon:poumon:Vert_Tho_01
+    4300124: poumon:poumon:Vert_Tho_02
+    4300126: poumon:poumon:Vert_Tho_03
+    4300128: poumon:poumon:Vert_Tho_01
+    4300130: poumon:poumon:Vert_Tho_02
+    4300132: poumon:poumon:Vert_Tho_03
+    4300134: poumon:poumon:Vert_Tho_01
+    4300136: poumon:poumon:Vert_Tho_02
+    4300138: poumon:poumon:Vert_Tho_03
+    4300140: poumon:poumon:Vert_Tho_01
+    4300142: poumon:poumon:Vert_Tho_02
+    4300144: poumon:poumon:Vert_Tho_03
+    4300146: poumon:poumon:Vert_Tho_01
+    4300148: poumon:poumon:Vert_Tho_02
+    4300150: poumon:poumon:Vert_Tho_03
+    4300152: poumon:poumon:Vert_Tho_01
+    4300154: poumon:poumon:Vert_Tho_02
+    4300156: poumon:poumon:Vert_Tho_03
+    4300158: poumon:poumon:Vert_Tho_01
+    4300160: poumon:poumon:Vert_Tho_02
+    4300162: poumon:poumon:Vert_Tho_03
+    4300164: poumon:poumon:Vert_Tho_01
+    4300166: poumon:poumon:Vert_Tho_02
+    4300168: poumon:poumon:Vert_Tho_03
+    4300170: poumon:poumon:Vert_Tho_01
+    4300172: poumon:poumon:Vert_Tho_02
+    4300174: poumon:poumon:Vert_Tho_03
+    4300176: poumon:poumon:Vert_Tho_01
+    4300178: poumon:poumon:Vert_Tho_02
+    4300180: poumon:poumon:Vert_Tho_03
+    4300182: poumon:poumon:Vert_Tho_01
+    4300184: poumon:poumon:Vert_Tho_02
+    4300186: poumon:poumon:Vert_Tho_03
+    4300188: poumon:poumon:Vert_Tho_01
+    4300190: poumon:poumon:Vert_Tho_02
+    4300192: poumon:poumon:Vert_Tho_03
+    4300194: poumon:poumon:Vert_Tho_01
+    4300196: poumon:poumon:Vert_Tho_02
+    4300198: poumon:poumon:Vert_Tho_03
+    4300200: poumon:poumon:Vert_Tho_01
+    4300202: poumon:poumon:Vert_Tho_02
+    4300204: poumon:poumon:Vert_Tho_03
+    4300206: poumon:poumon:Vert_Tho_01
+    4300208: poumon:poumon:Vert_Tho_02
+    4300210: poumon:poumon:Vert_Tho_03
+    4300212: poumon:poumon:Vert_Tho_01
+    4300214: poumon:poumon:Vert_Tho_02
+    4300216: poumon:poumon:Vert_Tho_03
+    4300218: poumon:poumon:Vert_Tho_01
+    4300220: poumon:poumon:Vert_Tho_02
+    4300222: poumon:poumon:Vert_Tho_03
+    4300224: poumon:poumon:Vert_Tho_01
+    4300226: poumon:poumon:Vert_Tho_02
+    4300228: poumon:poumon:Vert_Tho_03
+    4300230: Verterbre_Cervicale
+    4300232: Verterbre_Cervicale1
+    4300234: Verterbre_Cervicale2
+    4300236: Verterbre_Cervicale3
+    4300238: Verterbre_Cervicale4
+    4300240: Verterbre_Cervicale5
+    4300242: Clavicle_01
+    4300244: Clavicle_02
+    4300246: Clavicle_01
+    4300248: Clavicle_02
+    4300250: Cage_Thoracique_Origin
+    4300252: polySurface5
+    4300254: Cote_TopSecondary_R
+    4300256: Cote_TopSecondary_L
+    4300258: Cote_TOP_R
+    4300260: Cote_TOP_L
+    4300262: Cote_01_R
+    4300264: Cote_01_L
+    4300266: Cote_02_R
+    4300268: Cote_02_L
+    4300270: Cote_03_L
+    4300272: Cote_03_R
+    4300274: Cote_04_L
+    4300276: Cote_04_R
+    4300278: Cote_05_L
+    4300280: Cote_05_R
+    4300282: Cote_06_L
+    4300284: Cote_06_R
+    4300286: Cote_07_L
+    4300288: Cote_07_R
+    4300290: Cote_08_L
+    4300292: Cote_08_R
+    4300294: Sternum_01
+    4300296: Sternum_02
+    4300298: Sternum_Bottom
+    4300300: Manubrium
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

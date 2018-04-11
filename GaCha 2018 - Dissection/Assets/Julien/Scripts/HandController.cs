@@ -129,29 +129,6 @@ public class HandController : MonoBehaviour
         return;
       }
   }
-  /*
-  void OnTriggerEnter(Collider col)
-  {
-    if (col.tag == "Artere" || col.tag == "Os" || col.tag == "Organe" || col.tag == "Outil")
-      {
-        if (selectedObj != null)
-          {
-            DeselectdArtere(selectedObj);
-          }
-        SelectArtere(col.gameObject);
-      }
-  }
-
-  void OnTriggerExit(Collider col)
-  {
-    if (col.tag == "Artere" || col.tag == "Os" || col.tag == "Organe" || col.tag == "Outil")
-      {
-        if (selectedObj != null && col.gameObject.name == selectedObj.name)
-          {
-            DeselectdArtere(col.gameObject);
-          }
-      }
-  }*/
 
   void SelectArtere(GameObject obj)
   {
@@ -234,7 +211,7 @@ public class HandController : MonoBehaviour
         dragObj = selectedObj;
         //  dragObj.GetComponent<Rigidbody>().useGravity = false;
         dragObj.GetComponent<Rigidbody>().isKinematic = false;
-
+        CardManager.Instance.CheckOrgane(dragObj.name);
         
       }
   }
@@ -333,7 +310,7 @@ public class HandController : MonoBehaviour
       {
         return;
       }
-
+      
     materialRenderer.materials = mats;
     materialRenderer = null;
 

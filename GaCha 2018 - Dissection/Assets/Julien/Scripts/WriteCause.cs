@@ -23,6 +23,10 @@ public class WriteCause : MonoBehaviour
   {
     if (Input.GetKeyDown(KeyCode.Return) && nameField.activeInHierarchy == true)
       {
+        if (nameField.GetComponent<InputField>().text == CasualityManager.Instance.selectedCasuality.name)
+          {
+            ScoreManager.validerReponse();
+          }
         GameManager.Instance.EndRound();
       }
 
@@ -31,6 +35,5 @@ public class WriteCause : MonoBehaviour
         nameField.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
       }
-
   }
 }

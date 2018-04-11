@@ -8,7 +8,7 @@ public class CardManager : MonoBehaviour
 {
   public string SurgeonScene;
   public List<GameObject> listCard;
-  public List<GameObject> listSelectedCard;
+  public List<CartesScriptableObject> listSelectedCard;
   public List<CartesScriptableObject> ScriptableCardList;
   private float maladie;
   public Button valider;
@@ -50,7 +50,15 @@ public class CardManager : MonoBehaviour
   {
     if (compteur > 3)
       return;
-    listSelectedCard.Add(card);
+
+    foreach (CartesScriptableObject obj in ScriptableCardList)
+      {
+        if (obj.name == card.name)
+          {
+            listSelectedCard.Add(obj);
+          }
+      }
+
     card.GetComponent<UnityEngine.UI.Image>().color = Color.yellow;
     card.GetComponent<UnityEngine.UI.Button>().enabled = false;
     compteur += 1;
@@ -58,13 +66,12 @@ public class CardManager : MonoBehaviour
 
   void GoSurgeon()
   {
-    if (listSelectedCard.Count > 3)
+    if (listSelectedCard.Count > 1)
       {
         Cursor.lockState = CursorLockMode.Locked;
         SceneManager.LoadScene(SurgeonScene, LoadSceneMode.Single);
       }
   }
-
 
   public void DistributionCard()
   {
@@ -325,4 +332,18 @@ public class CardManager : MonoBehaviour
       }
   }
 
+  public void CheckOrgane(string nameOrgane)
+  {
+    foreach (CartesScriptableObject obj in ScriptableCardList)
+      {
+        foreach (GameObject obj2 in listCard)
+          {
+            if (obj.name == nameOrgane)
+              {
+                ScoreManager.MarquerPoints(obj.score);
+                listSelectedCard.Remove(obj);
+              }
+          }
+      }
+  }
 }
