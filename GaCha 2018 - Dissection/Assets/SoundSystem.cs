@@ -8,5 +8,4 @@ public class SoundSystem : MonoBehaviour {
 	void Start () {
         DontDestroyOnLoad(this);
 	}
-	
 }
