@@ -30,14 +30,4 @@ public class NameManager : MonoBehaviour {
 			Debug.Log ("raté gros noob");
 		}
 	}
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
