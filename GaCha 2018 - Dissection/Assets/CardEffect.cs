@@ -32,6 +32,18 @@ public class CardEffect : MonoBehaviour
             nameToCheck = "Thyroide";
             EventPose.pose += CheckName;
         }
+
+        if (name == "Peste4")
+        {
+            nameToCheck = "Thyroide";
+            EventPose.pose += CheckName;
+        }
+
+        if (name == "Peste4")
+        {
+            nameToCheck = "Thyroide";
+            EventPose.pose += CheckName;
+        }
     }
 
     void Validate()

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Strangulation6
   m_EditorClassIdentifier: 
   id: 24
-  description: "Retirer les glandes surr\xE9nales."
+  description: Retirer le rein droit.
   score: 8
   imageCard: {fileID: 21300000, guid: 38fd9c7716a48ff4aab2f06cbb83be6e, type: 3}
   tailleText: 12

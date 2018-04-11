@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Name: Pendaison3
   m_EditorClassIdentifier: 
   id: 27
-  description: "Pr\xE9lever les glandes surr\xE9nales."
+  description: "Pr\xE9lever le rein gauche."
   score: 5
   imageCard: {fileID: 21300000, guid: d9f72d04b52275d4da33dffc4daad852, type: 3}
   tailleText: 12
