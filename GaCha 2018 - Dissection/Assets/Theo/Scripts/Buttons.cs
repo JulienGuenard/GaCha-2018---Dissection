@@ -34,12 +34,11 @@ public class Buttons : MonoBehaviour {
         SceneManager.LoadScene("CustomizationMenu", LoadSceneMode.Single);
     }
 
-    public static void CustomizationMenu()
-    {
-        SceneManager.LoadScene("CustomizationMenu", LoadSceneMode.Single);
-    }
+	public void CustomizationMenuButton() {
+		SceneManager.LoadScene ("CustomizationMenu", LoadSceneMode.Single);
+	}
 
-    public static void TeamScore() {
+	public static void TeamScore() {
 		SceneManager.LoadScene("TeamScore", LoadSceneMode.Single);
 	}
 
