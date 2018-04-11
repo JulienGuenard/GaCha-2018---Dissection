@@ -58,7 +58,7 @@ public class ScoreManager : MonoBehaviour {
 			Buttons.FinalScore ();
 		} else {
 			NameManager.cptTours++;
-			Buttons.CustomizationMenu ();
+			Buttons.CustomizationMenuButton();
 		}
 	}
 

@@ -22,7 +22,7 @@ public class Buttons : MonoBehaviour {
 	}
 
 	public static void CardsMenu() {
-		SceneManager.LoadScene ("CardsMenu", LoadSceneMode.Single);
+		SceneManager.LoadScene ("CardMenu", LoadSceneMode.Single);
 	}
 
 	public void NamingMenu() {
@@ -34,7 +34,7 @@ public class Buttons : MonoBehaviour {
         SceneManager.LoadScene("CustomizationMenu", LoadSceneMode.Single);
     }
 
-	public void CustomizationMenuButton() {
+	public static void CustomizationMenuButton() {
 		SceneManager.LoadScene ("CustomizationMenu", LoadSceneMode.Single);
 	}
 
