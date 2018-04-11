@@ -4,43 +4,44 @@ using UnityEngine;
 
 public class EffectTaunt : MonoBehaviour
 {
-    public GameObject tnulUI;
-    public Timer timer;
-    public GameObject midTimeUI;
+  public GameObject tnulUI;
+  public Timer timer;
+  public GameObject midTimeUI;
 
-    public bool midTime;
+  public bool midTime;
 
-    // Use this for initialization
-    void Start()
-    {
-        EventTaunt.taunt += StartTaunted;
-    }
-    void StartTaunted()
-    {
-        StopAllCoroutines();
-        StartCoroutine(Taunted());
-    }
+  // Use this for initialization
+  void Start()
+  {
+    EventTaunt.taunt += StartTaunted;
+  }
 
-    IEnumerator Taunted()
-    {
-        tnulUI.gameObject.SetActive(true);
-        yield return new WaitForSeconds(10f);
-        tnulUI.gameObject.SetActive(false);
-    }
+  void StartTaunted()
+  {
+    StopAllCoroutines();
+    StartCoroutine(Taunted());
+  }
 
-    void Update()
-    {
-        if (timer.actualTime <= timer.maxTime /2 && !midTime)
-        {
-            midTime = true;
-            StartCoroutine(MidTimeView());
-        }
-    }
+  IEnumerator Taunted()
+  {
+    tnulUI.gameObject.SetActive(true);
+    yield return new WaitForSeconds(10f);
+    tnulUI.gameObject.SetActive(false);
+  }
 
-    IEnumerator MidTimeView()
-    {
-        midTimeUI.gameObject.SetActive(true);
-        yield return new WaitForSeconds(3f);
-        midTimeUI.gameObject.SetActive(false);
-    }
+  void Update()
+  {
+    if (timer.actualTime <= timer.maxTime / 2 && !midTime)
+      {
+        midTime = true;
+        StartCoroutine(MidTimeView());
+      }
+  }
+
+  IEnumerator MidTimeView()
+  {
+    midTimeUI.gameObject.SetActive(true);
+    yield return new WaitForSeconds(3f);
+    midTimeUI.gameObject.SetActive(false);
+  }
 }
