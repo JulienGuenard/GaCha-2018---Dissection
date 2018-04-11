@@ -2,40 +2,45 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EffectTremblement : MonoBehaviour {
+public class EffectTremblement : MonoBehaviour
+{
 
-    bool Tremblemement;
-    public GameObject bras;
+  bool Tremblemement;
+  public GameObject bras;
 
-	// Use this for initialization
-	void Start () {
-        EventTremblement.erreur += StartTremblement;
-    }
+  public GameObject UITremblement;
 
-    void StartTremblement()
-    {
-        StartCoroutine(Tremblement());
-    }
+  // Use this for initialization
+  void Start()
+  {
+    EventTremblement.erreur += StartTremblement;
+  }
 
-    IEnumerator Tremblement()
-    {
-        Tremblemement = true;
-        Debug.Log("Tremblement");
-        yield return new WaitForSeconds(10f);
-        Tremblemement = false;
-    }
+  void StartTremblement()
+  {
+    StartCoroutine(Tremblement());
+  }
 
-    IEnumerator PerfectTremblement() // le joueur est trop bon alors on le fait trembler
-    {
-        yield return new WaitForSeconds(120);
-        StartCoroutine(Tremblement());
-    }
+  IEnumerator Tremblement()
+  {
+    Tremblemement = true;
+    Debug.Log("Tremblement");
+    yield return new WaitForSeconds(10f);
+    Tremblemement = false;
+  }
 
-    // Update is called once per frame
-    void FixedUpdate () {
-        if (Tremblemement)
-        {
-            bras.transform.position += new Vector3(Random.Range(-0.5f, 0.5f), 0, Random.Range(-0.05f, 0.05f));
-        }
-    }
+  IEnumerator PerfectTremblement() // le joueur est trop bon alors on le fait trembler
+  {
+    yield return new WaitForSeconds(120);
+    StartCoroutine(Tremblement());
+  }
+
+  // Update is called once per frame
+  void FixedUpdate()
+  {
+    if (Tremblemement)
+      {
+        bras.transform.position += new Vector3(Random.Range(-0.5f, 0.5f), 0, Random.Range(-0.05f, 0.05f));
+      }
+  }
 }

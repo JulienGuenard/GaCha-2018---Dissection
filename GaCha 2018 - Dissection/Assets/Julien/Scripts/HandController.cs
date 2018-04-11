@@ -20,7 +20,7 @@ public class HandController : MonoBehaviour
 
   public float speedRotation;
 
-  static public GameObject selectedObj;
+  public GameObject selectedObj;
   public GameObject dragObj;
   Material lastMat;
   GameObject hand;
@@ -31,6 +31,8 @@ public class HandController : MonoBehaviour
   public Mesh Hand1;
   public Mesh Hand2;
   public Mesh Hand3;
+
+  GameObject DroppedItem;
 
   public static HandController Instance;
 
@@ -45,6 +47,7 @@ public class HandController : MonoBehaviour
     hand = GameObject.Find("Hand");
 //    handPos = GameObject.Find("HandPos").transform;
     handDrag = GameObject.Find("HandDrag").transform;
+    DroppedItem = GameObject.Find("DroppedItem");
   }
 
   void FixedUpdate()
@@ -53,34 +56,48 @@ public class HandController : MonoBehaviour
     // MoveToPos();
     RotateHand();
 
-    if (selectedObj != null && selectedObj.tag == "Artere" && dragObj != null && Input.GetKeyDown(KeyCode.Mouse0) && dragObj.name == "Scalpel" && selectedObj.GetComponent<Rigidbody>().useGravity == false)
+    if (selectedObj != null)
       {
-        CutArtere();
-        return;
-      }
+        if (selectedObj.tag != "Artere" && dragObj != null && Input.GetKeyDown(KeyCode.Mouse0) && dragObj.name == "Scalpel")
+          {
+            EventTaunt.taunt();
+            return;
+          }
 
-    if (selectedObj != null && selectedObj.tag == "Os" && dragObj != null && Input.GetKeyDown(KeyCode.Mouse0) && dragObj.name == "Scie" && selectedObj.GetComponent<Rigidbody>().useGravity == false)
-      {
-        CutOs();
-        return;
-      }
+        if (selectedObj.tag != "Os" && dragObj != null && Input.GetKeyDown(KeyCode.Mouse0) && dragObj.name == "Marteau")
+          {
+            EventTaunt.taunt();
+            return;
+          }
 
-    if (dragObj != null && Input.GetKeyDown(KeyCode.Mouse1))
-      {
-            Debug.Log(true);
-        Drop();
-        return;
-      }
+        if (selectedObj.tag == "Artere" && dragObj != null && Input.GetKeyDown(KeyCode.Mouse0) && dragObj.name == "Scalpel" && selectedObj.GetComponent<Rigidbody>().useGravity == false)
+          {
+            CutArtere();
+            return;
+          }
 
-    if (selectedObj != null && dragObj == null && Input.GetKeyDown(KeyCode.Mouse0))
-      {
-        Drag();
-        return;
+        if (selectedObj.tag == "Os" && dragObj != null && Input.GetKeyDown(KeyCode.Mouse0) && dragObj.name == "Scie" && selectedObj.GetComponent<Rigidbody>().useGravity == false)
+          {
+            CutOs();
+            return;
+          }
 
+        if (selectedObj != null && dragObj == null && Input.GetKeyDown(KeyCode.Mouse0))
+          {
+            Drag();
+            return;
+          }
       }
 
     if (dragObj != null)
       {
+        if (Input.GetKeyDown(KeyCode.Mouse1))
+          {
+            Debug.Log(true);
+            Drop();
+            return;
+          }
+          
         DragUpdate();
         return;
       }
@@ -88,7 +105,7 @@ public class HandController : MonoBehaviour
 
   void OnTriggerEnter(Collider col)
   {
-    if (col.tag == "Artere" || col.tag == "Os" || col.tag == "Organe" || col.tag == "Tool" || col.tag == "Outil")
+    if (col.tag == "Artere" || col.tag == "Os" || col.tag == "Organe" || col.tag == "Outil")
       {
         if (selectedObj != null)
           {
@@ -100,7 +117,7 @@ public class HandController : MonoBehaviour
 
   void OnTriggerExit(Collider col)
   {
-    if (col.tag == "Artere" || col.tag == "Os" || col.tag == "Organe" || col.tag == "Tool" || col.tag == "Outil")
+    if (col.tag == "Artere" || col.tag == "Os" || col.tag == "Organe" || col.tag == "Outil")
       {
         if (selectedObj != null && col.gameObject.name == selectedObj.name)
           {
@@ -165,10 +182,11 @@ public class HandController : MonoBehaviour
 
   void Drag()
   {
-        if (selectedObj.GetComponent<Rigidbody>() == null)
-            return;
+    if (selectedObj.GetComponent<Rigidbody>() == null)
+      return;
     if (selectedObj.GetComponent<Rigidbody>().useGravity == true)
       {
+        selectedObj.transform.parent = transform; 
         skinMesh.sharedMesh = Hand3;
         dragObj = selectedObj;
         dragObj.GetComponent<Rigidbody>().useGravity = false;
@@ -183,6 +201,7 @@ public class HandController : MonoBehaviour
 
   public void Drop()
   {
+    dragObj.transform.parent = DroppedItem.transform; 
     skinMesh.sharedMesh = Hand1;
     dragObj.GetComponent<Rigidbody>().useGravity = true;
     dragObj = null;
@@ -222,7 +241,7 @@ public class HandController : MonoBehaviour
       {
         lastMat = mats[0];
         mats[0] = os_silhouette;
-      } else if (obj.transform.CompareTag("Tool") == true)
+      } else if (obj.transform.CompareTag("Outil") == true)
       {
         lastMat = mats[0];
         mats[0] = tool_silhouette;
@@ -253,7 +272,7 @@ public class HandController : MonoBehaviour
       else if (lastTarget.transform.CompareTag("Os") == true)
       {
         mats[0] = lastMat;
-      } else if (lastTarget.transform.CompareTag("Tool") == true)
+      } else if (lastTarget.transform.CompareTag("Outil") == true)
       {
         mats[0] = lastMat;
       } else

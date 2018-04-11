@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Syphilis4
   m_EditorClassIdentifier: 
   id: 10
-  description: "Retirer l'art\xE8re pulmonaire."
+  description: "Pr\xE9lever la rate."
   score: 5
   imageCard: {fileID: 21300000, guid: d9f72d04b52275d4da33dffc4daad852, type: 3}
+  tailleText: 12

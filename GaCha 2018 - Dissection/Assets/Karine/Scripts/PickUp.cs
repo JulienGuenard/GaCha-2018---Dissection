@@ -2,22 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickUp : MonoBehaviour{
+public class PickUp : MonoBehaviour
+{
 
-    public GameObject itemTemp;
-    public Transform Hand;
+  public GameObject itemTemp;
+  public Transform Hand;
 
-    public GameObject bite;
+  public GameObject bite;
 
-    private void Start()
-    {
-       bite = HandController.selectedObj;
+  private void Start()
+  {
+    bite = HandController.Instance.selectedObj;
         
-    }
+  }
 
-    public void OnMouseDown()
-    {
+  public void OnMouseDown()
+  {
         
-    }
+  }
 }
 

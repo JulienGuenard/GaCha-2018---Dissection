@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Name: Pendaison5
   m_EditorClassIdentifier: 
   id: 29
-  description: Retirer la veine axillaire.
+  description: Retirer le manubrium.
   score: 10
   imageCard: {fileID: 21300000, guid: 38fd9c7716a48ff4aab2f06cbb83be6e, type: 3}
+  tailleText: 12
