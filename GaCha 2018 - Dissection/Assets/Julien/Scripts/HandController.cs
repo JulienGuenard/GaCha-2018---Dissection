@@ -65,8 +65,9 @@ public class HandController : MonoBehaviour
         return;
       }
 
-    if (selectedObj != null && dragObj != null && Input.GetKeyDown(KeyCode.Mouse1))
+    if (dragObj != null && Input.GetKeyDown(KeyCode.Mouse1))
       {
+            Debug.Log(true);
         Drop();
         return;
       }
@@ -87,7 +88,7 @@ public class HandController : MonoBehaviour
 
   void OnTriggerEnter(Collider col)
   {
-    if (col.tag == "Artere" || col.tag == "Os" || col.tag == "Organe" || col.tag == "Tool")
+    if (col.tag == "Artere" || col.tag == "Os" || col.tag == "Organe" || col.tag == "Tool" || col.tag == "Outil")
       {
         if (selectedObj != null)
           {
@@ -99,7 +100,7 @@ public class HandController : MonoBehaviour
 
   void OnTriggerExit(Collider col)
   {
-    if (col.tag == "Artere" || col.tag == "Os" || col.tag == "Organe" || col.tag == "Tool")
+    if (col.tag == "Artere" || col.tag == "Os" || col.tag == "Organe" || col.tag == "Tool" || col.tag == "Outil")
       {
         if (selectedObj != null && col.gameObject.name == selectedObj.name)
           {
@@ -164,6 +165,8 @@ public class HandController : MonoBehaviour
 
   void Drag()
   {
+        if (selectedObj.GetComponent<Rigidbody>() == null)
+            return;
     if (selectedObj.GetComponent<Rigidbody>().useGravity == true)
       {
         skinMesh.sharedMesh = Hand3;
