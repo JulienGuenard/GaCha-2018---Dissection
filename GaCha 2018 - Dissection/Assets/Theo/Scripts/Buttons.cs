@@ -21,7 +21,7 @@ public class Buttons : MonoBehaviour {
 		SceneManager.LoadScene ("Commands", LoadSceneMode.Single);
 	}
 
-	public void CardsMenu() {
+	public static void CardsMenu() {
 		SceneManager.LoadScene ("CardsMenu", LoadSceneMode.Single);
 	}
 

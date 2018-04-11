@@ -5,29 +5,75 @@ using UnityEngine.UI;
 
 public class NameManager : MonoBehaviour {
 
+	public static int cptTours = 1;
+
 	public static string team1;
 	public static string team2;
 	public static string team3;
 	public static string team4;
 	public static string team5;
 
-	public InputField n1;
-	public InputField n2;
-	public InputField n3;
-	public InputField n4;
-	public InputField n5;
 
-	public void lancer() {
-		if (n1.text != "" && n2.text != "" && n3.text != "" && n4.text != "" && n5.text != "") {
-			Debug.Log ("gg go jouer");
-			team1 = n1.text;
-			team2 = n2.text;
-			team3 = n3.text;
-			team4 = n4.text;
-			team5 = n5.text;
-			Buttons.CustomizationMenu();
-		} else {
-			Debug.Log ("raté gros noob");
+	public void lancerNostra() {
+		switch (cptTours) {
+		case 1: 
+			team1 = "Nostradamus";
+			break;
+		case 2: 
+			team2 = "Nostradamus";
+			break;
+		case 3: 
+			team3 = "Nostradamus";
+			break;
+		case 4: 
+			team4 = "Nostradamus";
+			break;
+		case 5: 
+			team5 = "Nostradamus";
+			break;
 		}
+		Buttons.CardsMenu ();
+	}
+
+	public void lancerAndre() {
+		switch (cptTours) {
+		case 1: 
+			team1 = "Nostradamus";
+			break;
+		case 2: 
+			team2 = "Nostradamus";
+			break;
+		case 3: 
+			team3 = "Nostradamus";
+			break;
+		case 4: 
+			team4 = "Nostradamus";
+			break;
+		case 5: 
+			team5 = "Nostradamus";
+			break;
+		}
+		Buttons.CardsMenu ();
+	}
+
+	public void lancerRondelet() {
+		switch (cptTours) {
+		case 1: 
+			team1 = "Nostradamus";
+			break;
+		case 2: 
+			team2 = "Nostradamus";
+			break;
+		case 3: 
+			team3 = "Nostradamus";
+			break;
+		case 4: 
+			team4 = "Nostradamus";
+			break;
+		case 5: 
+			team5 = "Nostradamus";
+			break;
+		}
+		Buttons.CardsMenu ();
 	}
 }
